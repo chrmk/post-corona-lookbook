@@ -22,6 +22,8 @@
 	<!-- Head Libs -->
 	<script async src="assets/vendors/modernizr.min.js"></script>
 
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      
 	<style>
 		#primary-nav li {
 			line-height: 1;
@@ -34,7 +36,7 @@
 <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-align="left" data-mobile-nav-style="modern" data-mobile-nav-shceme="gray" data-mobile-header-scheme="gray" data-mobile-nav-breakpoint="1199">
 	
 	<div id="wrap">
-		
+
 		<header class="main-header main-header-overlay" data-sticky-header="true" data-sticky-options='{ "stickyTrigger": "first-section" }'>
 			
 			<div class="mainbar-wrap">
@@ -81,21 +83,21 @@
 										</li>
 
 										<li>
-											<a href="#content">
+											<a href="#theme-relationships">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
-													<span class="txt">Theme #1: <br />tbd</span>
+													<span class="txt">Theme #1: <br />Relationships</span>
 												</span>
 											</a>
 										</li>
 
 										<li>
-											<a href="#content">
+											<a href="#theme-wellbeing">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
-													<span class="txt">Theme #2: <br />tbd</span>
+													<span class="txt">Theme #2: <br />Wellbeing</span>
 												</span>
 											</a>
 										</li>
@@ -105,7 +107,7 @@
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
-													<span class="txt">Theme #3: <br />Leisure</span>
+													<span class="txt">Theme #3: <br />Leisure Time</span>
 												</span>
 											</a>
 										</li>
@@ -142,9 +144,8 @@
 	</header><!-- /.main-header -->
 	
 	<main id="content" class="content">
-		
-		<section class="vc_row fullheight d-flex flex-wrap align-items-center pb-50">
 
+		<section class="vc_row fullheight d-flex flex-wrap align-items-center pb-20">
 			<div class="lqd-particles-bg-wrap">
 
 				<div class="ld-particles-container">
@@ -170,7 +171,7 @@
 								data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":1200,"delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"scale":1},"animations":{"scale":1}}'
 								data-split-options='{"type":"lines"}'
 							>
-								<span class="ld-fh-txt"> Social Bonding in a Post-Corona World</span>
+								<span class="ld-fh-txt">{{ overviewTitle }}</span>
 							</h1>
 						</div><!-- /.ld-fancy-heading -->
 
@@ -180,21 +181,13 @@
 								data-custom-animations="true"
 								data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":1200,"delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"scale":1},"animations":{"scale":1}}'
 								data-split-options='{"type":"lines"}'>
-								<span class="ld-fh-txt"> 
-									With our business opportunity lookbook 
-									we help
-									people whose personal relationships suffer from contact restrictions 
-									who want to 
-									feel connected
-								</span>
+								<span class="ld-fh-txt">{{ overviewText }}</span>
 							</p>
 						</div><!-- /.ld-fancy-heading -->
-						
 
 					</div><!-- /.col-lg-5 col-md-6 -->
 
 					<div class="lqd-column col-lg-7 col-md-6 hidden-xs hidden-sm hidden-md">
-						
 						<div class="ld-masked-image" data-dynamic-shape="true">
 							<svg version="1.1" class="scene" width="0" height="0" preserveAspectRatio="none" viewBox="0 0 1440 800">
 								<defs>
@@ -215,16 +208,11 @@
 						</div><!-- /ld-masked-image -->
 
 					</div><!-- /.col-lg-7 col-md-6 -->
-
 				</div><!-- /.row -->
-
-
-
-
 			</div><!-- /.container -->
 		</section>
 
-		<section class="vc_row pt-50 pb-60">
+		<section class="vc_row pt-20 pb-20">
 			<div class="container">
 				<div class="row">
 
@@ -232,9 +220,10 @@
 
 						<header class="fancy-title fancy-title-big mb-6">
 							<h2 data-split-text="true" data-split-options='{"type":"lines"}'>
-								(Center Venture description, max. 100 words): Lorem ipsum...
+								<span class="font-size-2-15x lh-15 text-primary" data-fittext="true" data-fittext-options='{ "maxFontSize": 70, "minFontSize": 40, "compressor": 0.5 }'>"Prolonged or intermittent social distancing may be necessary into 2022."</span>
+								<br />
+								- Harvard School of Public Health
 								<br>
-								<span class="font-size-2-15x lh-15 text-primary" data-fittext="true" data-fittext-options='{ "maxFontSize": 70, "minFontSize": 40, "compressor": 0.5 }'>#postcoronakeyfact</span>
 							</h2>
 						</header><!-- /.fancy-title -->
 						
@@ -244,147 +233,179 @@
 			</div><!-- /.container -->
 		</section>
 
-		<section class="vc_row pt-60 pb-90" id="theme-leisure">
-			<div class="container">
-				<div class="row d-flex flex-wrap align-items-center">
-
-					<div class="lqd-column col-lg-5 col-md-6 mb-5 mb-md-0" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":160,"initValues":{"translateY":50,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
-
-						<header class="fancy-title mb-60">
-
-							<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Theme #3</h6>
-							<h2 class="mt-4 mb-4">The Social Side of Leisure and Lifestyle</h2>
-							<p>Concerts, bars, clubs, sports and other large gatherings of people are going to be the last thing to return. However, these are the stages where most of our social lives take place. Where we celebrate our landmark events such as birthdays, anniversaries, or weddings. Where we get to know other people and form new bonds. How will the post-corona world impact the social aspects of our leisure activities?</p>
-
-						</header><!-- /.fancy-title -->
-						
-					</div><!-- /.col-lg-5 col-md-6 -->
-
-					<div class="lqd-column col-lg-6 col-md-5 col-md-offset-1">
-
-						<div class="liquid-img-group-single stretch-to-right" data-shadow-style="4" data-roundness="4" data-inview="true" data-animate-shadow="true" data-reveal="true" data-reveal-options='{"direction":"rl","bgcolor":"rgb(25, 38, 47)"}'>
-							<div class="liquid-img-group-img-container">
-								<div class="liquid-img-container-inner">
-									<figure>
-										<img  src="./img/theme-social-side-of-leisure.jpg" alt="Banner" />
-									</figure>
-								</div>
-							</div>
-						</div>
-
-					</div><!-- /.col-lg-6 col-md-5 col-md-offset-1 -->
-
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</section>
-
-		<section class="vc_row pt-80 pb-120">
+		<section class="vc_row pt-60 pb-20" style="background-color: #f1f1f1;">
 			<div class="container">
 
-				<div class="row">
-					<div class="lqd-column col-md-10 col-md-offset-1">
-						<header class="fancy-title text-center mb-75" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":100,"initValues":{"translateY":80,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
-							<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">The Trend Perspective</h6>
-							<h2 class="mt-4 mb-4">Leisure Activities Move to Online Space <br /> - So Do The Social Bonds</h2>
+				<cv-headline 
+					subtitle="The Themes"
+					title="We Identified 3 Themes That Describe How Social Distancing Will Influence Our Social Relationships" 
+				></cv-headline>
+				<cv-tiles v-bind:t="themes" isSubtitle></cv-tiles>
 
-						</header><!-- /.fancy-title -->
-					</div><!-- /.col-md-8 col-md-offset-2 -->
-				</div><!-- /.row -->
-
-				<div class="row">
-
-					<div class="lqd-column col-md-12">
-
-						<div class="liquid-blog-posts">
-
-							<div class="liquid-blog-grid row">
-
-								<div class="lqd-column col-md-4">
-									<article class="liquid-lp">
-										<figure class="liquid-lp-media rounded">
-											<a href="#">
-												<img src="./assets/demo/blog/blog-6.jpg" alt="Blog Post">
-											</a>
-										</figure>
-										<header class="liquid-lp-header">
-											<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Trend #3.1</h6>
-											<h2 class="entry-title liquid-lp-title h5">
-												<a href="#" rel="bookmark">
-													Socializing with your idols
-												</a>
-											</h2>
-											<!-- <p>Trend Summary (20 words): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a enim vitae est pellentesque ultricies.</p> -->
-
-											<!-- <div class="testimonial-quote">
-												<blockquote>
-													<p class="font-size-26 lh-16 text-dark opacity-08">“Key Fact”</p>
-												</blockquote>
-											</div> -->
-
-											<!-- <time class="liquid-lp-date font-style-italic size-lg" datetime="2019-08-16T11:33:03+00:00">Trend Categorization</time> -->
-										</header>
-									</article>
-								</div><!-- /.col-md-4 -->
-
-								
-								<div class="lqd-column col-md-4">
-									<article class="liquid-lp">
-										<figure class="liquid-lp-media rounded">
-											<a href="#">
-												<img src="./assets/demo/blog/blog-6.jpg" alt="Blog Post">
-											</a>
-										</figure>
-										<header class="liquid-lp-header">
-											<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Trend #3.2</h6>
-											<h2 class="entry-title liquid-lp-title h5">
-												<a href="#" rel="bookmark">Building Controllable Worlds Free From Worry</a>
-											</h2>
-										</header>
-									</article>
-								</div><!-- /.col-md-4 -->
-
-
-								<div class="lqd-column col-md-4">
-									<article class="liquid-lp">
-										<figure class="liquid-lp-media rounded">
-											<a href="#">
-												<img src="./assets/demo/blog/blog-6.jpg" alt="Blog Post">
-											</a>
-										</figure>
-										<header class="liquid-lp-header">
-											<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Trend #3.3</h6>
-											<h2 class="entry-title liquid-lp-title h5">
-												<a href="#" rel="bookmark">Long-Distance Training Buddies</a>
-											</h2>
-										</header>
-									</article>
-								</div><!-- /.col-md-4 -->
-								
-							</div><!-- /.liquid-blog-grid -->
-
-						</div><!-- /.liquid-blog-posts -->
-
-					</div><!-- /.col-md-12 -->
-
-				</div><!-- /.row -->
-
-				
 			</div><!-- /.container -->
 		</section><!-- /.vc_row -->
 
 
-		<section class="vc_row pt-50 pb-70">
+		<section class="vc_row pt-60 pb-20">
 			<div class="container">
+
+				<cv-headline 
+					subtitle="The Trends"
+					title="Our Themes are Driven By Trends That We Observed in the Current Corona-World" 
+				></cv-headline>
+
+				<div class="row">
+					<div class="lqd-column col-md-12">
+						<div class="liquid-portfolio-list">
+							<div class="row" >
+								<div class="lqd-column col-md-12">
+									<div class="liquid-filter-items justify-content-between align-items-center mb-3">
+										<div class="liquid-filter-items-inner">
+											<ul class="filter-list text-uppercase ltr-sp-1 filter-list-inline size-sm mb-0" id="pf-grid-1">
+												<li class="active" data-filter="*"><span>All Trends</span></li>
+												<li data-filter=".short-term"><span>Short-Term</span></li>
+												<li data-filter=".long-term"><span>Long-Term</span></li>
+												<li data-filter=".micro"><span>Micro</span></li>
+												<li data-filter=".macro"><span>Macro</span></li>
+												<li data-filter=".society"><span>Society</span></li>
+												<li data-filter=".technology"><span>Technology</span></li>
+												<li data-filter=".business"><span>Business</span></li>
+											</ul>
+										</div><!-- /.liquid-filter-items-inner -->
+									</div><!-- /.liquid-filter-items -->
+								</div><!-- /.col-md-12 -->
+							</div><!-- /.row -->
+						
+							<div class="row liquid-portfolio-list-row" data-liquid-masonry="true" data-masonry-options='{ "filtersID": "#pf-grid-1" }'>
+						
+								<cv-trend-masonry
+									v-for="trend in getTrends()"
+									v-bind:trend="trend"
+								></cv-trend-masonry>
+
+							</div><!-- /.row liquid-portfolio-list-row -->						
+						</div><!-- /.liquid-portfolio-list -->
+					</div><!-- /.col-md-12 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section>
+
+
+		<section class="vc_row pt-60 pb-20" style="background-color: #f1f1f1;">
+			<div class="container">
+
+				<cv-headline 
+					subtitle="The Business Opportunities"
+					title="We See Business Opportunities" 
+				></cv-headline>
+				<cv-tiles v-bind:t="themes"></cv-tiles>
+
+			</div><!-- /.container -->
+		</section><!-- /.vc_row -->
+
+
+		<cv-about-cdtm></cv-about-cdtm>
+
+
+		<hr style="border-bottom: 10px solid #f1f1f1;"/>
+
+
+		<cv-theme-header
+			v-bind:theme="themes[0]"
+		></cv-theme-header>
+
+		<section class="vc_row pt-20 pb-20" style="background-color: #f1f1f1;">
+			<div class="container">
+
+				<cv-headline 
+					subtitle="The Trend Perspective"
+					v-bind:title="themes[0].introTrends" 
+				></cv-headline>
+				<cv-tiles v-bind:t="themes[0].trends" isSmall></cv-tiles>
+				
+			</div><!-- /.container -->
+		</section><!-- /.vc_row -->
+
+		<cv-trend-details v-bind:t="themes[0].trends[0]"></cv-trend-details>
+		<cv-trend-details v-bind:t="themes[0].trends[1]"></cv-trend-details>
+		<cv-trend-details v-bind:t="themes[0].trends[2]"></cv-trend-details>
+
+
+		<hr style="border-bottom: 10px solid #f1f1f1;"/>
+
+
+		<cv-theme-header
+			v-bind:theme="themes[1]"
+		></cv-theme-header>
+
+		<section class="vc_row pt-20 pb-20" style="background-color: #f1f1f1;">
+			<div class="container">
+
+				<cv-headline 
+					subtitle="The Trend Perspective"
+					v-bind:title="themes[1].introTrends" 
+				></cv-headline>
+				<cv-tiles v-bind:t="themes[1].trends"></cv-tiles>
+				
+			</div><!-- /.container -->
+		</section><!-- /.vc_row -->
+
+		<cv-trend-details v-bind:t="themes[1].trends[0]"></cv-trend-details>
+		<cv-trend-details v-bind:t="themes[1].trends[1]"></cv-trend-details>
+		<cv-trend-details v-bind:t="themes[1].trends[2]"></cv-trend-details>
+
+
+		<hr style="border-bottom: 10px solid #f1f1f1;"/>
+
+		<cv-theme-header
+			v-bind:theme="themes[2]"
+		></cv-theme-header>
+
+		<section class="vc_row pt-20 pb-20" style="background-color: #f1f1f1;">
+			<div class="container">
+
+				<cv-headline 
+					subtitle="The Trend Perspective"
+					v-bind:title="themes[2].introTrends" 
+				></cv-headline>
+				<cv-tiles v-bind:t="themes[2].trends"></cv-tiles>
+				
+			</div><!-- /.container -->
+		</section><!-- /.vc_row -->
+
+		<cv-trend-details v-bind:t="themes[2].trends[0]"></cv-trend-details>
+		<cv-trend-details v-bind:t="themes[2].trends[1]"></cv-trend-details>
+		<cv-trend-details v-bind:t="themes[2].trends[2]"></cv-trend-details>
+
+	
+
+		<hr style="border-bottom: 10px solid #f1f1f1;"/>
+
+
+
+		<section class="vc_row pt-80 pb-120" id="opportunities">
+			<div class="container">
+
+				<div class="row">
+					<div class="lqd-column col-md-10 col-md-offset-1">
+						<header class="fancy-title text-center mb-75" data-custom-animations="true"
+							data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":100,"initValues":{"translateY":80,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
+							<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Chances</h6>
+							<h2 class="mt-4 mb-4">The Business Opportunity Perspective</h2>
+						</header><!-- /.fancy-title -->
+					</div><!-- /.col-md-8 col-md-offset-2 -->
+				</div><!-- /.row -->
+
 
 				<div class="row">
 
 					<div class="lqd-column col-md-12 z-index-2" data-parallax="true" data-parallax-from='{"translateY": 50}' data-parallax-to='{"translateY": -130}' data-parallax-options='{"overflowHidden": false, "duration":"1000","easing":"linear","reverse":true,"triggerHook":"0.3"}'>
 
-						<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Trend #3.3</h6>
-						<div class="ld-fancy-heading text-uppercase">
+						<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Business Opportunity #1</h6>
+						<div class="ld-fancy-heading">
 							<h1>
-								Long-Distance <br />
-								Training Buddies
+								Discover and strengthen<br />
+								your local community
 							</h1>
 						</div><!-- /.ld-fancy-heading -->
 
@@ -394,37 +415,31 @@
 
 				<div class="row">
 
-					<div class="lqd-column col-md-4 pr-md-3 pt-80">
+					<div class="lqd-column col-md-5 pr-md-3 pt-80">
 
 						<div class="ld-fancy-heading mask-text mb-65">
 
-							<h3
+							<p
 								data-split-text="true"
 								data-custom-animations="true"
 								data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":"1200","startDelay":"300","delay":"180","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":60},"animations":{"translateY":0}}'
 								data-split-options='{"type":"lines"}'
 							>
-								Trend Summary (20 words): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a enim vitae est pellentesque ultricies.
-							</h3>
+								Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In “normal” times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.
+
+							</p>
 
 						</div><!-- /.ld-fancy-heading mask-text -->
-
-						<p
-							data-split-text="true"
-							data-custom-animations="true"
-							data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":"1200","startDelay":"600","delay":"15","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":29,"rotateZ":2,"opacity":0},"animations":{"translateY":0,"rotateZ":0,"opacity":1}}'>
-							Trend Description (100 words): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a enim vitae est pellentesque ultricies. Curabitur vitae leo quis purus hendrerit porta. Aenean consectetur faucibus fringilla. Aliquam in gravida tortor. Phasellus congue tincidunt rhoncus. Vivamus sagittis sem eros, eu vehicula magna egestas vel. Morbi eget lectus molestie, commodo elit eget, ultricies odio.
-						</p>
 						
 					</div><!-- /.lqd-column col-md-4 -->
 
-					<div class="lqd-column col-md-6 col-md-offset-2 visible-md visible-lg">
+					<div class="lqd-column col-md-6 col-md-offset-1 visible-md visible-lg">
 
 						<div class="liquid-img-group-single" data-shadow-style="4" data-inview="true" data-inview-options='{"delayTime":800}' data-animate-shadow="true">
 							<div class="liquid-img-group-img-container">
 								<div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"translateY":-150}' data-parallax-to='{"translateY":87}' data-parallax-options='{"overflowHidden":false,"easing":"linear"}'>
 									<figure>
-										<img src="assets/demo/misc/fancy-image-2.jpg" alt="Creative Agency" />
+										<img src="./img/idea_1.jpg" alt="Creative Agency" />
 									</figure>
 								</div>
 							</div>
@@ -433,187 +448,65 @@
 					</div><!-- /.lqd-column col-md-6 col-md-offset-2 -->
 
 				</div><!-- /.row -->
-
 			</div><!-- /.container -->
-		</section>
-
-		<section class="vc_row pt-60 pb-40">
-			<div class="container">
+			
+			<div class="container mt-45">
 				<div class="row">
 
-					<div class="lqd-column col-md-3 col-sm-4">
-						<div
-							class="lqd-parallax"
-							data-parallax="true"
-							data-parallax-from='{"translateY":100}'
-							data-parallax-to='{"translateY":-170}'
-							data-parallax-options='{"easing":"linear", "overflowHidden": false}'
-							data-custom-animations="true"
-							data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":"1200","delay":"150","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":35,"opacity":0},"animations":{"translateY":0,"opacity":1}}'
-						>
+					<div class="lqd-column col-md-6 col-sm-12 mb-50">
 
-							<header class="fancy-title">
-								<h3 class="font-size-20 mb-25">Fact (30 words): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a enim vitae est pellentesque ultricies. </h3>
-								<p class="mb-45">Fact Source</p>
-							</header><!-- /.fancy-title -->
-						</div><!-- /.lqd-parallax -->
+						<div class="iconbox iconbox-heading-sm px-4" data-animate-icon="true"
+							data-plugin-options='{"color":"rgb(131, 11, 176):rgb(186, 0, 255)"}'>
+							<div class="iconbox-icon-wrap">
+								<span class="iconbox-icon-container">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
+										xml:space="preserve">
+										<path stroke-width="2" stroke-miterlimit="10" d="M63,18L63,54L1,54L1,10L22,10L30,18Z"></path>
+										<path stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" d="M23,36L30,43L 43,30">
+										</path>
+									</svg>
+								</span>
+							</div><!-- /.iconbox-icon-wrap -->
+							<div class="contents">
+								<h3 class="font-weight-semibold">Value Proposition</h3>
+								<p>With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form. </p>
+							</div><!-- /.contents -->
+						</div><!-- /.iconbox -->
 
-					</div><!-- /.col-md-3 col-sm-8 -->
+					</div><!-- /.col-md-4 col-sm-12 -->
 
-					<div class="lqd-column col-md-3 col-sm-4 col-md-offset-1">
-						<div
-							class="lqd-parallax"
-							data-parallax="true"
-							data-parallax-from='{"translateY":100}'
-							data-parallax-to='{"translateY":-170}'
-							data-parallax-options='{"easing":"linear", "overflowHidden": false}'
-							data-custom-animations="true"
-							data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":"1200","delay":"150","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":35,"opacity":0},"animations":{"translateY":0,"opacity":1}}'
-						>
+					<div class="lqd-column col-md-6 col-sm-12 mb-50">
 
-							<header class="fancy-title">
-								<h3 class="font-size-20 mb-25">Fact (30 words): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a enim vitae est pellentesque ultricies. </h3>
-								<p class="mb-45">Fact Source</p>
-							</header><!-- /.fancy-title -->
-						</div><!-- /.lqd-parallax -->
+						<div class="iconbox iconbox-heading-sm px-4" data-animate-icon="true"
+							data-plugin-options='{"color":"rgb(131, 11, 176):rgb(186, 0, 255)"}'>
+							<div class="iconbox-icon-wrap">
+								<span class="iconbox-icon-container">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
+										xml:space="preserve">
+										<path stroke-width="2" stroke-miterlimit="10" d="M17,16A15,15 0,1,1 47,16A15,15 0,1,1 17,16">
+										</path>
+										<path stroke-width="2" stroke-miterlimit="10" d="M22.083,16c0-5.477,4.44-9.917,9.917-9.917">
+										</path>
+										<path stroke-width="2" stroke-miterlimit="10" d="M32,64L32,31"></path>
+									</svg>
+								</span>
+							</div><!-- /.iconbox-icon-wrap -->
+							<div class="contents">
+								<h3 class="font-weight-semibold">Solution Sketch</h3>
+								<p>Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines, car, …). </p>
+							</div><!-- /.contents -->
+						</div><!-- /.iconbox -->
 
-					</div><!-- /.col-md-3 col-sm-8 -->
-
-					<div class="lqd-column col-md-3 col-sm-4 col-md-offset-1">
-						<div
-							class="lqd-parallax"
-							data-parallax="true"
-							data-parallax-from='{"translateY":100}'
-							data-parallax-to='{"translateY":-170}'
-							data-parallax-options='{"easing":"linear", "overflowHidden": false}'
-							data-custom-animations="true"
-							data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":"1200","delay":"150","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":35,"opacity":0},"animations":{"translateY":0,"opacity":1}}'
-						>
-
-							<header class="fancy-title">
-								<h3 class="font-size-20 mb-25">Fact (30 words): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a enim vitae est pellentesque ultricies. </h3>
-								<p class="mb-45">Fact Source</p>
-							</header><!-- /.fancy-title -->
-						</div><!-- /.lqd-parallax -->
-
-					</div><!-- /.col-md-3 col-sm-8 -->
+					</div><!-- /.col-md-4 col-sm-12 -->
 
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</section>
 
-
-
-		<section class="vc_row pt-80 pb-120" id="opportunities">
-			<div class="container">
-
-				<div class="row">
-
-					<div class="lqd-column col-md-10 col-md-offset-1">
-
-						<header class="fancy-title text-center mb-75" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":100,"initValues":{"translateY":80,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
-
-							<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Chances</h6>
-							<h2 class="mt-4 mb-4">The Business Opportunity Perspective</h2>
-
-							<div class="row">
-								<div class="lqd-column col-md-6 col-md-offset-3 px-md-5">
-									<p>Lorem ipsum...</p>
-								</div><!-- /.col-md-6 col-md-offset-3 -->
-							</div><!-- /.row -->
-
-						</header><!-- /.fancy-title -->
-
-					</div><!-- /.col-md-8 col-md-offset-2 -->
-
-				</div><!-- /.row -->
-
-				
-			</div><!-- /.container -->
-		</section><!-- /.vc_row -->
-
-		<section class="vc_row pt-100 pb-70" id="themes">
-			<div class="container">
-				
-			</div><!-- /.container -->
-		</section>
-
-		<section class="vc_row pt-90 pb-150" id="about">
-			<div class="container">
-				<div class="row d-flex flex-wrap align-items-center">
-
-					<div class="lqd-column col-md-5 hidden-xs hidden-sm">
-
-						<div class="lqd-parallax-team-members">
-
-							<div class="liquid-img-group-container">
-								<div class="liquid-img-group-inner">
-									<div class="liquid-img-group-single" data-roundness="4">
-										<div class="liquid-img-group-img-container">
-											<div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"translateY":17}' data-parallax-to='{"translateY":-74}' data-parallax-options='{"overflowHidden": false, "easing": "linear"}'>
-												<figure>
-													<img src="./img/cdtm3.jpg"  alt="Team Member"/>
-												</figure>
-											</div><!-- /.liquid-img-container-inner -->
-										</div><!-- /.liquid-img-group-img-container -->
-									</div><!-- /.liquid-img-group-single -->
-								</div><!-- /.liquid-img-group-inner -->
-							</div><!-- /.liquid-img-group-container -->
-	
-							<div class="liquid-img-group-container">
-								<div class="liquid-img-group-inner">
-									<div class="liquid-img-group-single" data-roundness="4">
-										<div class="liquid-img-group-img-container">
-											<div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"translateY":83}' data-parallax-to='{"translateY":-94}' data-parallax-options='{"overflowHidden": false, "easing": "linear"}'>
-												<figure>
-													<img src="./img/cdtm4.jpg" alt="Team Member"/>
-												</figure>
-											</div><!-- /.liquid-img-container-inner -->
-										</div><!-- /.liquid-img-group-img-container -->
-									</div><!-- /.liquid-img-group-single -->
-								</div><!-- /.liquid-img-group-inner -->
-							</div><!-- /.liquid-img-group-container -->
-	
-							<div class="liquid-img-group-container">
-								<div class="liquid-img-group-inner">
-									<div class="liquid-img-group-single" data-roundness="4">
-										<div class="liquid-img-group-img-container">
-											<div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"translateY":167}' data-parallax-to='{"translateY":-151}' data-parallax-options='{"overflowHidden": false, "easing": "linear"}'>
-												<figure>
-													<img src="./img/cdtm1.jpg"  alt="Team Member"/>
-												</figure>
-											</div><!-- /.liquid-img-container-inner -->
-										</div><!-- /.liquid-img-group-img-container -->
-									</div><!-- /.liquid-img-group-single -->
-								</div><!-- /.liquid-img-group-inner -->
-							</div><!-- /.liquid-img-group-container -->
-
-						</div><!-- /.lqd-parallax-team-members -->
-
-					</div><!-- /.col-md-5 -->
-
-					<div class="lqd-column col-md-6 col-md-offset-1"  data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":160,"initValues":{"translateY":50,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
-
-						<header class="fancy-title mb-60">
-
-							<h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">About the CDTM</h6>
-							<h2 class="mt-4 mb-4">Educating the Innovators of Tomorrow</h2>
-							<p>The <strong>Center for Digital Technology and Management (CDTM)</strong> is a joint institution of the two universities in Munich, the Ludwig-Maximilians-Universität München (LMU) and the Technische Universität München (TUM).</p>
-							<p>CDTM offers the interdisciplinary add-on study program „Technology Management“, which is part of the Elite Network of Bavaria. Students from various study backgrounds with creative ideas, great motivation and an entrepreneurial mindset are offered the tools to put their ideas into practice.</p>
-
-						</header><!-- /.fancy-title -->
-
-						<a href="#" class="btn btn-solid text-uppercase circle btn-bordered border-thin font-size-14 font-weight-semibold" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
-							<span>
-								<span class="btn-txt">More about the CDTM</span>
-							</span>
-						</a>
-
-					</div><!-- /.col-md-7 -->
-
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</section>
+		<cv-about-zukunftsinstitut></cv-about-zukunftsinstitut>
+		<cv-about-cdtm></cv-about-cdtm>
 		
 	</main><!-- /#content.content -->
 	
@@ -638,12 +531,13 @@
 		</section>
 		
 	</footer><!-- /.main-footer -->
-	
+
 </div><!-- /#wrap -->
 
 <script src="./assets/vendors/jquery.min.js"></script>
 <script src="./assets/js/theme-vendors.js"></script>
 <script src="./assets/js/theme.min.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
