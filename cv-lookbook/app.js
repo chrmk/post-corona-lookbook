@@ -4,6 +4,372 @@
 //   `
 // });
 
+Vue.component('cv-page-header', {
+  template: `
+  <header class="main-header main-header-overlay" data-sticky-header="true"
+      data-sticky-options='{ "stickyTrigger": "first-section" }'>
+
+    <div class="mainbar-wrap">
+      <div class="megamenu-hover-bg"></div><!-- /.megamenu-hover-bg -->
+      <div class="container-fluid mainbar-container">
+        <div class="mainbar">
+          <div class="row mainbar-row align-items-lg-stretch px-4">
+
+            <div class="col-auto pr-5">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="index-creative.html" rel="home">
+                  <span class="navbar-brand-inner">
+                    <img class="logo-dark" src="./img/logo.png" alt="CDTM">
+                    <img class="logo-sticky" src="./img/logo.png" alt="CDTM">
+                    <img class="mobile-logo-default" src="./img/logo.png" alt="CDTM">
+                    <img class="logo-default" src="./img/logo.png" alt="CDTM">
+                  </span>
+                </a>
+                <button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse"
+                  data-target="#main-header-collapse" aria-expanded="false"
+                  data-changeclassnames='{ "html": "mobile-nav-activated overflow-hidden" }'>
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="bars">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                  </span>
+                </button>
+              </div><!-- /.navbar-header -->
+            </div><!-- /.col -->
+
+            <div class="col">
+
+              <div class="collapse navbar-collapse" id="main-header-collapse">
+
+                <ul id="primary-nav" class="main-nav nav align-items-lg-stretch justify-content-lg-start"
+                  data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }' data-localscroll="true">
+
+                  <li>
+                    <a href="#content">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Overview</span>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#theme-relationships">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Theme #1: <br />Relationships</span>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#theme-wellbeing">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Theme #2: <br />Wellbeing</span>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#theme-leisure">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Theme #3: <br />Leisure Time</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#opportunities">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Opportunities</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">About</span>
+                      </span>
+                    </a>
+                  </li>
+
+                </ul><!-- /#primary-nav  -->
+
+              </div><!-- /#main-header-collapse -->
+
+            </div><!-- /.col -->
+
+          </div><!-- /.mainbar-row -->
+        </div><!-- /.mainbar -->
+      </div><!-- /.mainbar-container -->
+    </div><!-- /.mainbar-wrap -->
+
+  </header><!-- /.main-header -->
+  `
+});
+
+Vue.component('cv-page-footer', {
+  template: `
+  <footer class="main-footer pt-80">
+    <section class="bt-fade-white-015 pt-90 pb-90">
+      <div class="container">
+        <div class="row">
+
+          <div class="lqd-column col-md-6 col-md-offset-3 text-center">
+
+            <figure class="mb-40">
+              <img src="./img/logo.png" alt="Logo">
+            </figure>
+
+            <p>© 2020 CDTM</p>
+
+          </div><!-- /.col-md-6 -->
+
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+  </footer><!-- /.main-footer -->`
+});
+
+
+Vue.component('cv-about-team', {
+  template: `
+  <section class="vc_row pt-130 pb-80">
+    <div class="container">
+      <div class="row">
+      <div class="lqd-column col-md-10 col-md-offset-1">
+        <header class="fancy-title text-center mb-75" data-custom-animations="true"
+          data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":100,"initValues":{"translateY":80,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
+          <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Our Team</h6>
+          <h2 class="mt-4 mb-4">
+          Great things in business are never done by one person.
+          </h2>
+        </header><!-- /.fancy-title -->
+      </div><!-- /.col-md-8 col-md-offset-2 -->
+
+      </div><!-- /.row -->
+
+      <div class="row">
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-7.jpg" alt="Loretta Dean" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Loretta Dean</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-8.jpg" alt="David Richards" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">David Richards</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-9.jpg" alt="Andrea Harman" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Andrea Harman</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-10.jpg" alt="Andrea Harman" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Andrea Harman</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-7.jpg" alt="Loretta Dean" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Loretta Dean</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-8.jpg" alt="David Richards" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">David Richards</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-9.jpg" alt="Andrea Harman" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Andrea Harman</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-10.jpg" alt="Andrea Harman" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Andrea Harman</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+  </section>
+  `
+});
+
 Vue.component('cv-about-zukunftsinstitut', {
   template: `
     <section class="vc_row pt-80 pb-80" id="zukunftsinstitut">
@@ -147,7 +513,7 @@ Vue.component('cv-about-cdtm', {
 });
 
 Vue.component('cv-headline', {
-  props: [ 'title', 'subtitle' ],
+  props: ['title', 'subtitle'],
   template: `
     <div class="row">
       <div class="lqd-column col-md-10 col-md-offset-1">
@@ -161,29 +527,6 @@ Vue.component('cv-headline', {
   `,
 });
 
-Vue.component('cv-trend-masonry', {
-  props: [ 'trend' ],
-  template: `
-    <div class="lqd-column col-lg-2 col-sm-4 px-4 masonry-item" :class=trend.category>
-      <div class="ld-pf-item ld-pf-dark pf-details-visible pf-bg-hidden title-size-30 pf-hover-shadow pf-hover-shadow-alt">
-
-        <div class="ld-pf-inner">
-          <div class="ld-pf-image">
-            <figure><img :src=trend.image :alt=trend.name></figure>
-            <div class="ld-pf-bg bg-gradient-primary-lr opacity-09">
-              <a :href=trend.link class="btn btn-xsm btn-naked font-weight-bold text-white" style="white-space: normal; padding: 30px; line-height: 1.5;">
-                <span><span class="btn-txt">{{ trend.name }}</span></span>
-              </a>
-            </div><!-- /.ld-pf-bg -->
-          </div><!-- /.ld-pf-image -->
-
-          <a :href=trend.link class="liquid-overlay-link"></a>
-        </div><!-- /.ld-pf-inner -->
-      </div><!-- /.ld-pf-item -->
-    </div><!-- /.col-lg-4 col-md-6 -->
-  `
-});
-
 // <div class="ld-pf-details pl-0 py-3">
 //   <div class="ld-pf-details-inner">
 //     <h5 class="ld-pf-title h5">{{ trend.name }}</h5>
@@ -191,9 +534,9 @@ Vue.component('cv-trend-masonry', {
 // </div><!-- /.ld-pf-details -->
 
 Vue.component('cv-theme-header', {
-  props: [ 'theme' ],
+  props: ['theme'],
   methods: {
-    getLinkID: function(link) {
+    getLinkID: function (link) {
       return link.replace('#', '')
     }
   },
@@ -229,10 +572,33 @@ Vue.component('cv-theme-header', {
   `,
 });
 
+Vue.component('cv-trend-masonry', {
+  props: ['trend'],
+  template: `
+    <div class="lqd-column col-lg-2 col-sm-4 px-4 masonry-item" :class=trend.category>
+      <div class="ld-pf-item ld-pf-dark pf-details-visible pf-bg-hidden title-size-30 pf-hover-shadow pf-hover-shadow-alt">
+
+        <div class="ld-pf-inner">
+          <div class="ld-pf-image">
+            <figure><img :src=trend.image :alt=trend.name></figure>
+            <div class="ld-pf-bg bg-gradient-primary-lr opacity-09">
+              <a :href=trend.link class="btn btn-xsm btn-naked font-weight-bold text-white" style="white-space: normal; padding: 30px; line-height: 1.5;">
+                <span><span class="btn-txt">{{ trend.name }}</span></span>
+              </a>
+            </div><!-- /.ld-pf-bg -->
+          </div><!-- /.ld-pf-image -->
+
+          <a :href=trend.link class="liquid-overlay-link"></a>
+        </div><!-- /.ld-pf-inner -->
+      </div><!-- /.ld-pf-item -->
+    </div><!-- /.col-lg-4 col-md-6 -->
+  `
+});
+
 Vue.component('cv-trend-details', {
-  props: [ 't'],
+  props: ['t'],
   methods: {
-    getLinkID: function(link) {
+    getLinkID: function (link) {
       return link.replace('#', '')
     }
   },
@@ -246,8 +612,7 @@ Vue.component('cv-trend-details', {
         <div class="row">
           <div class="lqd-column col-md-8 z-index-2" data-parallax="true" data-parallax-from='{"translateY":50}' data-parallax-to='{"translateY": 0}' data-parallax-options='{"overflowHidden": false, "duration":"1000","easing":"linear","reverse":true,"triggerHook":"0.3"}'>
             <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">
-            Relationships >> Trend #1
-            {{ t.subtitle }}
+            Relationships >> {{ t.subtitle }}
             </h6>
             <div class="ld-fancy-heading">
               <h1>
@@ -310,7 +675,7 @@ Vue.component('cv-trend-details', {
 });
 
 Vue.component('cv-trend-signal', {
-  props: [ 's' ],
+  props: ['s'],
   stemplate: `
     <h1>Signal: {{ s }}</h1>
   `,
@@ -337,8 +702,9 @@ Vue.component('cv-trend-signal', {
   `
 });
 
+
 Vue.component('cv-tiles', {
-  props: [ 't', 'isSubtitle' , 'isSmall'],
+  props: ['t', 'isSubtitle', 'isSmall'],
   // template: `<h1>{{ t }}</h1>`,
   template: `
     <div class="row">
@@ -409,17 +775,13 @@ Vue.component('cv-tiles', {
   `
 });
 
-
-
-
-
 new Vue({
-	el: '#wrap',
-	data: {
+  el: '#wrap',
+  data: {
     overviewTitle: "Social Bonding in a Post-Corona World",
     overviewText: "With our business opportunity lookbook we help people whose personal relationships suffer from contact restrictions who want to feel connected.",
     themes: [
-      { 
+      {
         subtitle: "Theme #1",
         name: "Boosting Social Bonds",
         summary: "Social distancing is an unprecedented challenge for humans as it deprives us from most physical connections with other people and alters the few social interactions still allowed. At the same time, the COVID-19 measures highlight pre-crisis societal trends such as increasing isolation and loneliness, long-distance relationships and new work. While our lifestyle has radically changed over the last decades, the fundamental need for meaningful relationships has not. Boosting social bonds therefore requires different approaches than throughout most of our evolutionary history, not only during this crisis, but also in a Post-Corona world.",
@@ -427,9 +789,9 @@ new Vue({
         link: "theme-relationships",
         introTrends: "[INTRO TRENDS]",
         trends: [
-          { 
+          {
             subtitle: 'Trend #1.1',
-            name: 'Search for Community & Belonging', 
+            name: 'Search for Community & Belonging',
             summary: 'In moments of crisis humans naturally turn to communities in search for emotional support.',
             detail: 'The lifestyle of many Europeans before the crisis was mostly individualistic, focusing on personal achievements and experiences. One consequence of COVID-19 might be a prioritization of community experiences and life over detached individualism. People will value the social bonds created with their local environment during the crisis. The search for communities could be reflected in consumer decisions (e.g. focus on local shops) as well as lifestyle choices (e.g. preference of smaller cities/villages compared to megacities).',
             image: './img/trend-idols.jpg',
@@ -451,9 +813,9 @@ new Vue({
               }
             ]
           },
-          { 
+          {
             subtitle: 'Trend #1.2',
-            name: 'Increased Loneliness', 
+            name: 'Increased Loneliness',
             summary: 'Despite ever growing cities and denser populated areas, loneliness has been increasing throughout the past decades.',
             detail: 'The Zukunftsinstut has called it “monster of modernity” and symptom of “hypercivilisation”. COVID-19 has shed light on this long existing problem as many people feel the hardship of lacking social interactions. Reasons for feeling lonely are manifold, including declining community structures, religiosity and multi-generation households and increasing social media usage. But loneliness is also receiving more political, business and health care system attention, as it is freed from taboos long associated with psychological problems and is acknowledged as a large-scale problem.',
             image: './img/trend-idols.jpg',
@@ -475,13 +837,13 @@ new Vue({
               }
             ]
           },
-          { 
+          {
             subtitle: 'Trend #1.3',
-            name: 'Increasing Mobility', 
+            name: 'Increasing Mobility',
             summary: 'TREND1.3 SUMMARY',
             image: './img/trend-idols.jpg',
             link: '#social',
-            category: ['short-term',  'micro', 'business',  'society'],
+            category: ['short-term', 'micro', 'business', 'society'],
             signals: [
               {
                 text: "Younger generations change jobs more often. Gallup reports that in the millennial generation 21% say they've changed jobs within the past year, which is more than three times the number of non-millennials.",
@@ -500,7 +862,7 @@ new Vue({
           }
         ]
       },
-      { 
+      {
         subtitle: "Theme #2",
         name: "Promoting Mental and Physical Wellbeing",
         summary: "COVID-19 poses severe threats not only to physical but also mental wellbeing of global society. Research shows that previous outbreaks of similar diseases have had lasting mental health effects, undermining the importance of proactive efforts. Moreover, subsequent habit formation during a lockdown suggests that emerging health trends will not regress in post-crisis scenarios. Consequently, besides a general acceleration of mental health problems, we expect tendencies towards a retradizionalisation of gender roles, increased risks in child development, rising demand for online health care, and a trend to home cooking to substantially affect society in the long-run.",
@@ -508,9 +870,9 @@ new Vue({
         link: "theme-wellbeing",
         introTrends: "[INTRO TRENDS]",
         trends: [
-          { 
+          {
             subtitle: 'Trend #2.1',
-            name: 'Increased Mental Health Issues as Isolation Aftermath', 
+            name: 'Increased Mental Health Issues as Isolation Aftermath',
             summary: 'With 2.6 bn people in some sort of isolation, we are conducting the largest psychological experiment ever, facing the risk of severe mental health issues.',
             detail: 'During the outbreak of the virus, a negative impact on the mental health over the whole society can be perceived. Especially for those with poor health conditions the impact is significant. However, these short-term effects manifest in long-term habits as research about previous outbreaks shows, suggesting that proactive measures have to be undertaken. Consequently, the need for psychological care is rising.',
             image: './img/trend-idols.jpg',
@@ -531,9 +893,9 @@ new Vue({
                 link: "https://www.who.int/docs/default-source/coronaviruse/mental-health-considerations.pdf"
               }
             ]
-          }, { 
+          }, {
             subtitle: 'Trend #2.2',
-            name: 'Retradizionalisation of Gender Roles', 
+            name: 'Retradizionalisation of Gender Roles',
             summary: 'For families with underaged children, the corona crisis is especially challenging.',
             detail: 'Schools are closed and children have to be taken care of at home - while simultaneously balancing remote work. First surveys and studies show that this could lead to a retraditionalization of role models. It can be observed that mothers tend to overtake more of caretaking, working less in their pay jobs. If one considers that leaders are forged in crisis, this tendency could impact careers significantly. Politics and institutions, like the Bertelsmann Stiftung, raise concerns that these could foster the inequality dynamics between genders even more.',
             image: './img/trend-idols.jpg',
@@ -554,9 +916,9 @@ new Vue({
                 link: "https://www.kas.de/documents/252038/7995358/Corona+%E2%80%93+Familien+am+Limit.pdf/a31e9a94-9f27-e738-89cd-ac00b4d270b4?version=1.0&t=1588687485712"
               }
             ]
-          }, { 
+          }, {
             subtitle: 'Trend #2.3',
-            name: 'Increased Risks in Child Development', 
+            name: 'Increased Risks in Child Development',
             summary: 'School closures substantially disrupt the lives of students and their families and pose long-lasting risks for child health.',
             details: 'The unique combination of social isolation together with a public health crisis, and an upcoming economic recession lead to more expected cases of mental disorders among children. Since mental problems during childhood are often a life-long burden for individuals, we face generation-wide long-term effects on child health.',
             image: './img/trend-idols.jpg',
@@ -580,7 +942,7 @@ new Vue({
           }
         ]
       },
-      { 
+      {
         subtitle: "Theme #3",
         name: "The Social Side of Leisure and Lifestyle",
         summary: "Concerts, bars, clubs, sports and other large gatherings of people are going to be the last thing to return. However, these are the stages where most of our social lives take place. Where we celebrate our landmark events such as birthdays, anniversaries, or weddings. Where we get to know other people and form new bonds. How will the post-corona world impact the social aspects of our leisure activities?",
@@ -588,9 +950,9 @@ new Vue({
         link: "theme-leisure",
         introTrends: "Leisure Activities Move into Online Space - So Do Social Bonds",
         trends: [
-          { 
+          {
             subtitle: 'Trend #3.1',
-            name: 'Socializing With Your Idols: Interactive Concerts', 
+            name: 'Socializing With Your Idols: Interactive Concerts',
             summary: "In the years to come, different approaches of interactive live streaming of concerts could rise.",
             detail: "As the music industry has migrated to streaming, touring has become critical to financial success. In response to the coronavirus pandemic, artists are playing virtual concerts on social media platforms and video games like Fortnite. Online concerts open up new possibilities in terms of geographical availability, as well as other ways to interact with the audience. Additionally, it may drive humans to perform music together during these events. It could very well be a test case for more concert experiences migrating online in the future. Nevertheless, the willingness to spend on a virtual version of a performance is yet to be assessed.",
             image: './img/trend-idols.jpg',
@@ -636,7 +998,7 @@ new Vue({
             ]
           }, {
             subtitle: 'Trend #3.3',
-            name: 'Long-Distance Training Buddies', 
+            name: 'Long-Distance Training Buddies',
             summary: 'Athletes may be training alone, but they can still feel part of a larger group.',
             detail: 'With gyms and sport clubs closing their doors to curb the coronavirus outbreak, people are turning to online alternatives to maintain their sports routines. At-home training classes and virtual races connect yogis, runners and cyclists in times of social distancing and, thus, help them to remain motivated. Athletes train and compete on their own, and then connect with others through online results and narratives.',
             image: './img/trend-training.jpg',
@@ -667,14 +1029,14 @@ new Vue({
 
     ]
   },
-	methods: {
-		sayHi: function(param) {
+  methods: {
+    sayHi: function (param) {
       return 'Hi' + ' ' + this.person.test
     },
 
-    getTrends: function() {
+    getTrends: function () {
       return this.themes[0].trends.concat(this.themes[1].trends).concat(this.themes[2].trends)
     }
-	}
+  }
 });
 
