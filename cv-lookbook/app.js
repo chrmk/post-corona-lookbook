@@ -612,25 +612,25 @@ Vue.component('cv-trend-details', {
         <div class="row">
           <div class="lqd-column col-md-8 z-index-2" data-parallax="true" data-parallax-from='{"translateY":50}' data-parallax-to='{"translateY": 0}' data-parallax-options='{"overflowHidden": false, "duration":"1000","easing":"linear","reverse":true,"triggerHook":"0.3"}'>
             <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">
-            Relationships >> {{ t.subtitle }}
+            {{ t.subtitle }}
             </h6>
             <div class="ld-fancy-heading">
-              <h1>
+              <h2>
                 {{ t.name }}
-              </h1>
+              </h2>
             </div><!-- /.ld-fancy-heading -->
           </div><!-- /.lqd-column col-md-12 -->
         </div><!-- /.row -->
 
         <div class="row">
           <div class="lqd-column col-md-8 pr-md-3 pt-40">
-            <div class="ld-fancy-heading mask-text mb-20">
-              <h3
+            <div class="ld-fancy-heading mask-text mb-10">
+              <h5
                 data-split-text="true"
                 data-custom-animations="true"
                 data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":"1200","startDelay":"300","delay":"180","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":0},"animations":{"translateY":0}}'
                 data-split-options='{"type":"lines"}'
-              >{{ t.summary  }}</h3>
+              >{{ t.summary  }}</h5>
             </div><!-- /.ld-fancy-heading mask-text -->
 
             <p
@@ -640,10 +640,10 @@ Vue.component('cv-trend-details', {
               data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":"1200","startDelay":"600","delay":"15","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":100,"rotateZ":2,"opacity":0},"animations":{"translateY":0,"rotateZ":0,"opacity":1}}'>{{ t.detail }}</p>
           </div><!-- /.lqd-column col-md-4 -->
 
-          <div class="lqd-column col-md-2 col-md-offset-1 visible-md visible-lg">
+          <div class="lqd-column col-md-4 visible-md visible-lg" style="left: 20px;">
             <div class="liquid-img-group-single" data-shadow-style="4" data-inview="true" data-inview-options='{"delayTime":400}' data-animate-shadow="true">
               <div class="liquid-img-group-img-container">
-                <div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"translateY":-100}' data-parallax-to='{"translateY":-200}' data-parallax-options='{"overflowHidden":false,"easing":"linear"}'>
+                <div class="liquid-img-container-inner" data-parallax="true" data-parallax-from='{"translateY":-100}' data-parallax-to='{"translateY":0}' data-parallax-options='{"overflowHidden":false,"easing":"linear"}'>
                   <figure>
                     <img :src=t.image :alt=t.name />
                   </figure>
@@ -657,15 +657,15 @@ Vue.component('cv-trend-details', {
         <div class="row">
 
           <div class="lqd-column col-md-4 col-sm-4 text-center">
-            <cv-trend-signal v-bind:s="t.signals[0]"></cv-trend-signal>
+            <cv-trend-signal v-bind:s="t.signals[0]" :subtitle="1"></cv-trend-signal>
           </div><!-- /.col-md-3 col-sm-8 -->
 
           <div class="lqd-column col-md-4 col-sm-4 text-center">
-            <cv-trend-signal v-bind:s="t.signals[1]"></cv-trend-signal>
+            <cv-trend-signal v-bind:s="t.signals[1]" :subtitle="2"></cv-trend-signal>
           </div><!-- /.col-md-3 col-sm-8 -->
 
           <div class="lqd-column col-md-4 col-sm-4 text-center">
-            <cv-trend-signal v-bind:s="t.signals[2]"></cv-trend-signal>
+            <cv-trend-signal v-bind:s="t.signals[2]" :subtitle="3"></cv-trend-signal>
           </div><!-- /.col-md-3 col-sm-8 -->
 
         </div><!-- /.row -->
@@ -675,7 +675,7 @@ Vue.component('cv-trend-details', {
 });
 
 Vue.component('cv-trend-signal', {
-  props: ['s'],
+  props: [ 's', 'subtitle' ],
   stemplate: `
     <h1>Signal: {{ s }}</h1>
   `,
@@ -683,19 +683,21 @@ Vue.component('cv-trend-signal', {
     <div
       class="lqd-parallax"
       data-parallax="true"
-      data-parallax-from='{"translateY":50}'
+      data-parallax-from='{"translateY":20}'
       data-parallax-to='{"translateY":0}'
       data-parallax-options='{"easing":"linear", "overflowHidden": false}'
       data-custom-animations="true"
       data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":"1200","delay":"150","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":35,"opacity":0},"animations":{"translateY":0,"opacity":1}}'
     >
       <header class="fancy-title">
-        
+        <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">
+          Signal #{{ subtitle }}
+        </h6>
         <h3 class="font-size-18 mb-15">
           {{ s.text }}
         </h3>
         <p class="mb-15">
-          <a :href=s.link>{{ s.source }}</a>
+          <a :href=s.link target="_blank">{{ s.source }}</a>
         </p>
       </header><!-- /.fancy-title -->
     </div><!-- /.lqd-parallax -->
