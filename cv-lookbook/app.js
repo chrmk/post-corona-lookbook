@@ -4,6 +4,372 @@
 //   `
 // });
 
+Vue.component('cv-page-header', {
+  template: `
+  <header class="main-header main-header-overlay" data-sticky-header="true"
+      data-sticky-options='{ "stickyTrigger": "first-section" }'>
+
+    <div class="mainbar-wrap">
+      <div class="megamenu-hover-bg"></div><!-- /.megamenu-hover-bg -->
+      <div class="container-fluid mainbar-container">
+        <div class="mainbar">
+          <div class="row mainbar-row align-items-lg-stretch px-4">
+
+            <div class="col-auto pr-5">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="index-creative.html" rel="home">
+                  <span class="navbar-brand-inner">
+                    <img class="logo-dark" src="./img/logo.png" alt="CDTM">
+                    <img class="logo-sticky" src="./img/logo.png" alt="CDTM">
+                    <img class="mobile-logo-default" src="./img/logo.png" alt="CDTM">
+                    <img class="logo-default" src="./img/logo.png" alt="CDTM">
+                  </span>
+                </a>
+                <button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse"
+                  data-target="#main-header-collapse" aria-expanded="false"
+                  data-changeclassnames='{ "html": "mobile-nav-activated overflow-hidden" }'>
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="bars">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                  </span>
+                </button>
+              </div><!-- /.navbar-header -->
+            </div><!-- /.col -->
+
+            <div class="col">
+
+              <div class="collapse navbar-collapse" id="main-header-collapse">
+
+                <ul id="primary-nav" class="main-nav nav align-items-lg-stretch justify-content-lg-start"
+                  data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }' data-localscroll="true">
+
+                  <li>
+                    <a href="#content">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Overview</span>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#theme-relationships">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Theme #1: <br />Relationships</span>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#theme-wellbeing">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Theme #2: <br />Wellbeing</span>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#theme-leisure">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Theme #3: <br />Leisure Time</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#opportunities">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">Opportunity: <br />Conversio</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about">
+                      <span class="link-icon"></span>
+                      <span class="link-txt">
+                        <span class="link-ext"></span>
+                        <span class="txt">About</span>
+                      </span>
+                    </a>
+                  </li>
+
+                </ul><!-- /#primary-nav  -->
+
+              </div><!-- /#main-header-collapse -->
+
+            </div><!-- /.col -->
+
+          </div><!-- /.mainbar-row -->
+        </div><!-- /.mainbar -->
+      </div><!-- /.mainbar-container -->
+    </div><!-- /.mainbar-wrap -->
+
+  </header><!-- /.main-header -->
+  `
+});
+
+Vue.component('cv-page-footer', {
+  template: `
+  <footer class="main-footer pt-80">
+    <section class="bt-fade-white-015 pt-90 pb-90">
+      <div class="container">
+        <div class="row">
+
+          <div class="lqd-column col-md-6 col-md-offset-3 text-center">
+
+            <figure class="mb-40">
+              <img src="./img/logo.png" alt="Logo">
+            </figure>
+
+            <p>© 2020 CDTM</p>
+
+          </div><!-- /.col-md-6 -->
+
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+  </footer><!-- /.main-footer -->`
+});
+
+
+Vue.component('cv-about-team', {
+  template: `
+  <section class="vc_row pt-130 pb-80">
+    <div class="container">
+      <div class="row">
+      <div class="lqd-column col-md-10 col-md-offset-1">
+        <header class="fancy-title text-center mb-75" data-custom-animations="true"
+          data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":100,"initValues":{"translateY":80,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
+          <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Our Team</h6>
+          <h2 class="mt-4 mb-4">
+          Great things in business are never done by one person.
+          </h2>
+        </header><!-- /.fancy-title -->
+      </div><!-- /.col-md-8 col-md-offset-2 -->
+
+      </div><!-- /.row -->
+
+      <div class="row">
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-7.jpg" alt="Loretta Dean" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Loretta Dean</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-8.jpg" alt="David Richards" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">David Richards</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-9.jpg" alt="Andrea Harman" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Andrea Harman</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-10.jpg" alt="Andrea Harman" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Andrea Harman</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-7.jpg" alt="Loretta Dean" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Loretta Dean</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-8.jpg" alt="David Richards" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">David Richards</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-9.jpg" alt="Andrea Harman" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Andrea Harman</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+        <div class="lqd-column col-md-3 col-sm-6">
+
+          <div class="liquid-img-group-single mb-20" data-reveal="true" data-reveal-options='{"direction":"bt"}'>
+            <div class="liquid-img-group-img-container">
+              <div class="liquid-img-container-inner">
+                <figure>
+                  <img src="./assets/demo/team/team-10.jpg" alt="Andrea Harman" />
+                </figure>
+              </div><!-- /.liquid-img-container-inner -->
+            </div><!-- /.liquid-img-group-img-container -->
+          </div><!-- /.liquid-img-group-single -->
+
+          <div class="ld-fancy-heading mask-text">
+            <h3 class="font-size-20 mb-1" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"300","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":50},"animations":{"translateY":0}}'
+              data-split-options='{"type":"words"}'><span class="ld-fh-txt">Andrea Harman</span></h3>
+          </div><!-- /.ld-fancy-heading -->
+          <div class="ld-fancy-heading mask-text">
+            <h6 class="font-size-14 font-weight-medium" data-split-text="true" data-custom-animations="true"
+              data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":700,"startDelay":"600","delay":100,"easing":"easeOutQuint","direction":"forward","initValues":{"translateY":39},"animations":{"translateY":0}}'
+              data-split-options='{"type":"lines"}'><span class="ld-fh-txt">Founder</span></h6>
+          </div><!-- /.ld-fancy-heading -->
+
+        </div><!-- /.col-md-3 col-sm-6 -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+  </section>
+  `
+});
+
 Vue.component('cv-about-zukunftsinstitut', {
   template: `
     <section class="vc_row pt-80 pb-80" id="zukunftsinstitut">
@@ -147,41 +513,18 @@ Vue.component('cv-about-cdtm', {
 });
 
 Vue.component('cv-headline', {
-  props: [ 'title', 'subtitle' ],
+  props: ['title', 'subtitle', 'text'],
   template: `
     <div class="row">
       <div class="lqd-column col-md-10 col-md-offset-1">
         <header class="fancy-title text-center mb-40" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":100,"initValues":{"translateY":80,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
           <h6 class="text-uppercase ltr-sp-2 font-size-14 font-weight-semibold text-secondary">{{ subtitle }}</h6>
           <h2 class="mt-0 mb-0">{{ title }}</h2>
-
+          <p>{{ text }}</p>
         </header><!-- /.fancy-title -->
       </div><!-- /.col-md-8 col-md-offset-2 -->
     </div><!-- /.row -->
   `,
-});
-
-Vue.component('cv-trend-masonry', {
-  props: [ 'trend' ],
-  template: `
-    <div class="lqd-column col-lg-2 col-sm-4 px-4 masonry-item" :class=trend.category>
-      <div class="ld-pf-item ld-pf-dark pf-details-visible pf-bg-hidden title-size-30 pf-hover-shadow pf-hover-shadow-alt">
-
-        <div class="ld-pf-inner">
-          <div class="ld-pf-image">
-            <figure><img :src=trend.image :alt=trend.name></figure>
-            <div class="ld-pf-bg bg-gradient-primary-lr opacity-09">
-              <a :href=trend.link class="btn btn-xsm btn-naked font-weight-bold text-white" style="white-space: normal; padding: 30px; line-height: 1.5;">
-                <span><span class="btn-txt">{{ trend.name }}</span></span>
-              </a>
-            </div><!-- /.ld-pf-bg -->
-          </div><!-- /.ld-pf-image -->
-
-          <a :href=trend.link class="liquid-overlay-link"></a>
-        </div><!-- /.ld-pf-inner -->
-      </div><!-- /.ld-pf-item -->
-    </div><!-- /.col-lg-4 col-md-6 -->
-  `
 });
 
 // <div class="ld-pf-details pl-0 py-3">
@@ -191,9 +534,9 @@ Vue.component('cv-trend-masonry', {
 // </div><!-- /.ld-pf-details -->
 
 Vue.component('cv-theme-header', {
-  props: [ 'theme' ],
+  props: ['theme'],
   methods: {
-    getLinkID: function(link) {
+    getLinkID: function (link) {
       return link.replace('#', '')
     }
   },
@@ -229,10 +572,33 @@ Vue.component('cv-theme-header', {
   `,
 });
 
+Vue.component('cv-trend-masonry', {
+  props: ['trend'],
+  template: `
+    <div class="lqd-column col-lg-2 col-sm-4 px-4 masonry-item" :class=trend.category>
+      <div class="ld-pf-item ld-pf-dark pf-details-visible pf-bg-hidden title-size-30 pf-hover-shadow pf-hover-shadow-alt">
+
+        <div class="ld-pf-inner">
+          <div class="ld-pf-image">
+            <figure><img :src=trend.image :alt=trend.name></figure>
+            <div class="ld-pf-bg bg-gradient-primary-lr opacity-09">
+              <a :href=trend.link class="btn btn-xsm btn-naked font-weight-bold text-white" style="white-space: normal; padding: 30px; line-height: 1.5;">
+                <span><span class="btn-txt">{{ trend.name }}</span></span>
+              </a>
+            </div><!-- /.ld-pf-bg -->
+          </div><!-- /.ld-pf-image -->
+
+          <a :href=trend.link class="liquid-overlay-link"></a>
+        </div><!-- /.ld-pf-inner -->
+      </div><!-- /.ld-pf-item -->
+    </div><!-- /.col-lg-4 col-md-6 -->
+  `
+});
+
 Vue.component('cv-trend-details', {
-  props: [ 't'],
+  props: ['t'],
   methods: {
-    getLinkID: function(link) {
+    getLinkID: function (link) {
       return link.replace('#', '')
     }
   },
@@ -305,7 +671,7 @@ Vue.component('cv-trend-details', {
 });
 
 Vue.component('cv-trend-signal', {
-  props: [ 's', 'subtitle' ],
+  props: ['s', 'subtitle'],
   stemplate: `
     <h1>Signal: {{ s }}</h1>
   `,
@@ -334,8 +700,9 @@ Vue.component('cv-trend-signal', {
   `
 });
 
+
 Vue.component('cv-tiles', {
-  props: [ 't', 'isSubtitle' , 'isSmall'],
+  props: ['t', 'isSubtitle', 'isSmall'],
   // template: `<h1>{{ t }}</h1>`,
   template: `
     <div class="row">
@@ -405,10 +772,6 @@ Vue.component('cv-tiles', {
       </div><!-- /.row -->
   `
 });
-
-
-
-
 
 new Vue({
 	el: '#wrap',
@@ -588,7 +951,7 @@ new Vue({
           trends: [
             {
               subtitle: 'Trend #3.1',
-              name: 'Socializing With Your Idols: Interactive Concerts',
+              name: 'Socializing with Your Idols during Interactive Concerts',
               summary: "In the years to come, different approaches of interactive live streaming of concerts could rise.",
               detail: "As the music industry has migrated to streaming, touring has become critical to financial success. In response to the coronavirus pandemic, artists are playing virtual concerts on social media platforms and video games like Fortnite. Online concerts open up new possibilities in terms of geographical availability, as well as other ways to interact with the audience. Additionally, it may drive humans to perform music together during these events. It could very well be a test case for more concert experiences migrating online in the future. Nevertheless, the willingness to spend on a virtual version of a performance is yet to be assessed.",
               image: './img/trend-idols.jpg',
@@ -663,14 +1026,14 @@ new Vue({
         }
       ]
   },
-	methods: {
-		sayHi: function(param) {
+  methods: {
+    sayHi: function (param) {
       return 'Hi' + ' ' + this.person.test
     },
 
-    getTrends: function() {
+    getTrends: function () {
       return this.themes[0].trends.concat(this.themes[1].trends).concat(this.themes[2].trends)
     }
-	}
+  }
 });
 
