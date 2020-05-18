@@ -89,7 +89,7 @@ Vue.component('cv-page-header', {
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
-                        <span class="txt">Opportunities</span>
+                        <span class="txt">Opportunity: <br />Conversio</span>
                       </span>
                     </a>
                   </li>
@@ -513,14 +513,14 @@ Vue.component('cv-about-cdtm', {
 });
 
 Vue.component('cv-headline', {
-  props: ['title', 'subtitle'],
+  props: ['title', 'subtitle', 'text'],
   template: `
     <div class="row">
       <div class="lqd-column col-md-10 col-md-offset-1">
         <header class="fancy-title text-center mb-40" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":100,"initValues":{"translateY":80,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
           <h6 class="text-uppercase ltr-sp-2 font-size-14 font-weight-semibold text-secondary">{{ subtitle }}</h6>
           <h2 class="mt-0 mb-0">{{ title }}</h2>
-
+          <p>{{ text }}</p>
         </header><!-- /.fancy-title -->
       </div><!-- /.col-md-8 col-md-offset-2 -->
     </div><!-- /.row -->
@@ -675,7 +675,7 @@ Vue.component('cv-trend-details', {
 });
 
 Vue.component('cv-trend-signal', {
-  props: [ 's', 'subtitle' ],
+  props: ['s', 'subtitle'],
   stemplate: `
     <h1>Signal: {{ s }}</h1>
   `,
