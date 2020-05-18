@@ -898,7 +898,7 @@ new Vue({
           name: "Boosting Our Existing Social Bonds",
           summary: "Social distancing is an unprecedented challenge for humans as it deprives us of most physical connections with other people and alters the few social interactions still allowed. At the same time, the COVID-19 measures highlight pre-crisis societal trends such as increasing isolation and loneliness, long-distance relationships, and new work. While our lifestyle has radically changed over the last decades, the fundamental need for meaningful relationships has not. Boosting social bonds, therefore, requires different approaches than throughout most of our evolutionary history, not only during this crisis, but also in a Post-Corona world.",
           image: "./img/theme-social-bonds.jpg",
-          link: "theme-relationships",
+          link: "./theme-relationships.html",
           introTrends: "A Globalized Society Turns Towards Old and New Forms of Creating a Sense of Community",
           trends: [
             {
@@ -1008,7 +1008,7 @@ new Vue({
           name: "Promoting Mental and Physical Wellbeing",
           summary: "COVID-19 poses severe threats not only to physical but also mental wellbeing of global society. Research shows that previous outbreaks of similar diseases have had lasting mental health effects, undermining the importance of proactive efforts. Moreover, subsequent habit formation during a lockdown suggests that emerging health trends will not regress in post-crisis scenarios. Consequently, besides a general acceleration of mental health problems, we expect tendencies towards a retraditionalization of gender roles, increased risks in child development, rising demand for online health care, and a trend to home cooking to substantially affect society in the long-run.",
           image: "./img/theme-wellbeing.jpg",
-          link: "theme-wellbeing",
+          link: "./theme-wellbeing.html",
           introTrends: "[INTRO TRENDS]",
           trends: [
             {
@@ -1116,7 +1116,7 @@ new Vue({
           name: "The Social Side of Leisure and Lifestyle",
           summary: "Concerts, bars, clubs, sports and other large gatherings of people are going to be the last thing to return. However, these are the stages where most of our social lives take place. Where we celebrate our landmark events such as birthdays, anniversaries, or weddings. Where we get to know other people and form new bonds. How will the post-corona world impact the social aspects of our leisure activities?",
           image: "./img/theme-social-side-of-leisure.jpg",
-          link: "theme-leisure",
+          link: "./theme-leisure.html",
           introTrends: "Leisure Activities Move into Online Space - So Do Social Bonds",
           trends: [
             {
