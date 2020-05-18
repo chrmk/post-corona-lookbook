@@ -50,7 +50,7 @@ Vue.component('cv-page-header', {
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
-                        <span class="txt">Overview</span>
+                        <span class="txt font-weight-bold">Overview</span>
                       </span>
                     </a>
                   </li>
@@ -60,7 +60,7 @@ Vue.component('cv-page-header', {
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
-                        <span class="txt">Theme #1: <br />Relationships</span>
+                        <span class="txt font-weight-bold"><small class="text-uppercase">Theme #1</small><br />Boosting Relationships</span>
                       </span>
                     </a>
                   </li>
@@ -70,7 +70,7 @@ Vue.component('cv-page-header', {
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
-                        <span class="txt">Theme #2: <br />Wellbeing</span>
+                        <span class="txt font-weight-bold"><small class="text-uppercase">Theme #2</small><br />Promoting Wellbeing</span>
                       </span>
                     </a>
                   </li>
@@ -80,7 +80,7 @@ Vue.component('cv-page-header', {
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
-                        <span class="txt">Theme #3: <br />Leisure Time</span>
+                        <span class="txt font-weight-bold"><small class="text-uppercase">Theme #3</small><br />Adapting Leisure Times</span>
                       </span>
                     </a>
                   </li>
@@ -89,7 +89,7 @@ Vue.component('cv-page-header', {
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
-                        <span class="txt">Case Study: <br />Conversio</span>
+                        <span class="txt font-weight-bold"><small class="text-uppercase">Case Study</small><br />Conversio Board Game</span>
                       </span>
                     </a>
                   </li>
@@ -98,7 +98,7 @@ Vue.component('cv-page-header', {
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
-                        <span class="txt">About</span>
+                        <span class="txt font-weight-bold">About</span>
                       </span>
                     </a>
                   </li>
@@ -700,6 +700,120 @@ Vue.component('cv-trend-signal', {
   `
 });
 
+Vue.component('cv-opportunity-details', {
+  props: ['o' ],
+  methods: {
+    getLinkID: function (link) {
+      return link.replace('#', '')
+    }
+  },
+  template: `
+    <section class="vc_row pt-20 pb-20" :id=getLinkID(o.link)>>
+        <div class="container">
+
+          <div class="row">
+
+            <div class="lqd-column col-md-8 z-index-2">
+
+              <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">{{ o.subtitle }}</h6>
+              <div class="ld-fancy-heading">
+                <h2>
+                  {{ o.name }}
+                </h2>
+              </div><!-- /.ld-fancy-heading -->
+
+              <div class="ld-fancy-heading mask-text">
+
+                <p data-split-text="true" data-custom-animations="true"
+                  data-ca-options='{"triggerHandler":"inview","animationTarget":".split-inner","duration":"1200","startDelay":"300","delay":"180","easing":"easeOutQuint","direction":"forward","initValues":{"translateY":60},"animations":{"translateY":0}}'
+                  data-split-options='{"type":"lines"}'>
+                  {{ o.summary }}
+                </p>
+              </div><!-- /.ld-fancy-heading mask-text -->
+            </div><!-- /.lqd-column col-md-4 -->
+
+            <div class="lqd-column col-md-4 visible-md visible-lg" style="left: 20px; top: 20px">
+              <div class="liquid-img-group-single" data-shadow-style="4" data-inview="true"
+                data-inview-options='{"delayTime":800}' data-animate-shadow="true">
+                <div class="liquid-img-group-img-container">
+                  <div class="liquid-img-container-inner">
+                    <figure>
+                      <img :src=o.image :alt=o.name />
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.lqd-column col-md-6 col-md-offset-2 -->
+
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+
+        <div class="container mt-45">
+          <div class="row">
+
+            <div class="lqd-column col-md-6 col-sm-12 mb-50">
+
+              <div class="iconbox iconbox-heading-sm px-4" data-animate-icon="true"
+                data-plugin-options='{"color":"rgb(249, 184, 81):rgb(249, 184, 81)"}'>
+                <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Value Proposition</h6>
+                <div class="iconbox-icon-wrap">
+                  <span class="iconbox-icon-container">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
+                      xml:space="preserve">
+                      <path stroke-width="2" stroke-miterlimit="10" d="M63,18L63,54L1,54L1,10L22,10L30,18Z"></path>
+                      <path stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" d="M23,36L30,43L 43,30">
+                      </path>
+                    </svg>
+                  </span>
+                </div><!-- /.iconbox-icon-wrap -->
+                <div class="contents text-justify">
+                  <p>With a platform that connects people to new people that are close to their social network, we could
+                    enable the formation of new friend circles of friends of friends that live close together that could
+                    support one another mentally as well as in everyday needs. By connecting them to people that are
+                    close to their social network, you increase the chance that they trust one another more quickly and
+                    that lasting and strong social bonds form. </p>
+                </div><!-- /.contents -->
+              </div><!-- /.iconbox -->
+
+            </div><!-- /.col-md-4 col-sm-12 -->
+
+            <div class="lqd-column col-md-6 col-sm-12 mb-50">
+
+              <div class="iconbox iconbox-heading-sm px-4" data-animate-icon="true"
+                data-plugin-options='{"color":"rgb(249, 184, 81):rgb(249, 184, 81)"}'>
+                <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Solution Sketch</h6>
+                <div class="iconbox-icon-wrap">
+                  <span class="iconbox-icon-container">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
+                      xml:space="preserve">
+                      <path stroke-width="2" stroke-miterlimit="10" d="M17,16A15,15 0,1,1 47,16A15,15 0,1,1 17,16">
+                      </path>
+                      <path stroke-width="2" stroke-miterlimit="10" d="M22.083,16c0-5.477,4.44-9.917,9.917-9.917">
+                      </path>
+                      <path stroke-width="2" stroke-miterlimit="10" d="M32,64L32,31"></path>
+                    </svg>
+                  </span>
+                </div><!-- /.iconbox-icon-wrap -->
+                <div class="contents text-justify">
+                  <p>Build an app/website that builds a person's social network from his existing social media contacts
+                    and asks for a person's current location (and/or location he/she will move to). Ask the person how
+                    close people should live that we then give “friend” suggestions for. Thereby we create a person’s
+                    personal circle of friends in the local area (/multiple areas) that he can reach out to via the
+                    platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping
+                    trips and exchanges/borrowings of everyday goods (e.g. kitchen machines, car, …). </p>
+                </div><!-- /.contents -->
+              </div><!-- /.iconbox -->
+
+            </div><!-- /.col-md-4 col-sm-12 -->
+
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>
+  `
+});
+
 
 Vue.component('cv-tiles', {
   props: ['t', 'isSubtitle', 'isSmall'],
@@ -724,7 +838,7 @@ Vue.component('cv-tiles', {
                       {{ t[0].subtitle }}
                     </h6>
                     <h2 class="entry-title liquid-lp-title h5">
-                      <a :href=t[0].link rel="bookmark">{{ t[0].name }}</a>
+                      <a :href=t[0].link rel="bookmark" data-localscroll="true">{{ t[0].name }}</a>
                     </h2>
                   </header>
                 </article>
@@ -740,7 +854,7 @@ Vue.component('cv-tiles', {
                   <header class="liquid-lp-header">
                     <h6 v-if="isSubtitle" class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">{{ t[1].subtitle }}</h6>
                     <h5 class="entry-title liquid-lp-title h5">
-                      <a :href=t[1].link rel="bookmark">{{ t[1].name }}</a>
+                      <a :href=t[1].link rel="bookmark" data-localscroll="true">{{ t[1].name }}</a>
                     </h5>
                   </header>
                 </article>
@@ -757,7 +871,7 @@ Vue.component('cv-tiles', {
                   <header class="liquid-lp-header">
                     <h6 v-if="isSubtitle" class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">{{ t[2].subtitle }}</h6>
                     <h2 class="entry-title liquid-lp-title h5">
-                      <a :href=t[2].link rel="bookmark">{{ t[2].name }}</a>
+                      <a :href=t[2].link rel="bookmark" data-localscroll="true">{{ t[2].name }}</a>
                     </h2>
                   </header>
                 </article>
@@ -777,15 +891,15 @@ new Vue({
 	el: '#wrap',
 	data: {
   overviewTitle: "Social Bonding in a Post-Corona World",
-  overviewText: "With our business opportunity lookbook we help people whose personal relationships suffer from contact restrictions who want to feel connected.",
+  overviewText: "With our business opportunity lookbook we help people whose personal relationships suffer from contact restrictions and who want to feel connected.",
    themes: [
         {
           subtitle: "Theme #1",
-          name: "Boosting Social Bonds",
+          name: "Boosting Our Existing Social Bonds",
           summary: "Social distancing is an unprecedented challenge for humans as it deprives us of most physical connections with other people and alters the few social interactions still allowed. At the same time, the COVID-19 measures highlight pre-crisis societal trends such as increasing isolation and loneliness, long-distance relationships, and new work. While our lifestyle has radically changed over the last decades, the fundamental need for meaningful relationships has not. Boosting social bonds, therefore, requires different approaches than throughout most of our evolutionary history, not only during this crisis, but also in a Post-Corona world.",
           image: "./img/theme-social-bonds.jpg",
           link: "theme-relationships",
-          introTrends: "[INTRO TRENDS]",
+          introTrends: "A Globalized Society Turns Towards Old and New Forms of Creating a Sense of Community",
           trends: [
             {
               subtitle: 'Trend #1.1',
@@ -858,6 +972,34 @@ new Vue({
                   link: "https://wol.iza.org/articles/university-study-abroad-and-graduates-employability/long"
                 }
               ]
+            },
+          ],
+          introOpportunities: "[INTRO Opportunities]",
+          opportunities: [
+            {
+              subtitle: 'Opportunity #1.1',
+              name: 'Discover and Strengthen Your Local Community',
+              summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
+              valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
+              solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+              image: './img/opportunity-local-community.jpg',
+              link: '#opportunity-local-community',
+            }, {
+              subtitle: 'Opportunity #1.2',
+              name: 'Discover and Strengthen Your Local Community',
+              summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
+              valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
+              solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+              image: './img/opportunity-local-community.jpg',
+              link: '#opportunity-local-community',
+            }, {
+              subtitle: 'Opportunity #1.3',
+              name: 'Discover and Strengthen Your Local Community',
+              summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
+              valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
+              solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+              image: './img/opportunity-local-community.jpg',
+              link: '#opportunity-local-community',
             }
           ]
         },
@@ -894,7 +1036,7 @@ new Vue({
               ]
             }, {
               subtitle: 'Trend #2.2',
-              name: 'Retradizionalisation of Gender Roles',
+              name: 'Go Back to Traditional Gender Roles',
               summary: 'For families with underaged children, the corona crisis is especially challenging.',
               detail: 'Schools are closed and children have to be taken care of at home - while simultaneously balancing remote work. First surveys and studies show that this could lead to a retraditionalization of role models. It can be observed that mothers tend to overtake more of caretaking, working less in their pay jobs. If one considers that leaders are forged in crisis, this tendency could impact careers significantly. Politics and institutions, like the Bertelsmann Stiftung, raise concerns that these could foster the inequality dynamics between genders even more.',
               image: './img/trend-gender-roles.jpg',
@@ -938,6 +1080,34 @@ new Vue({
                   link: "https://www.kff.org/health-reform/issue-brief/the-implications-of-covid-19-for-mental-health-and-substance-use/"
                 }
               ]
+            }
+          ],
+          introOpportunities: "[INTRO Opportunities]",
+          opportunities: [
+            {
+              subtitle: 'Opportunity #1.1',
+              name: 'Discover and Strengthen Your Local Community',
+              summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
+              valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
+              solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+              image: './img/opportunity-local-community.jpg',
+              link: '#opportunity-local-community',
+            }, {
+              subtitle: 'Opportunity #1.2',
+              name: 'Discover and Strengthen Your Local Community',
+              summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
+              valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
+              solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+              image: './img/opportunity-local-community.jpg',
+              link: '#opportunity-local-community',
+            }, {
+              subtitle: 'Opportunity #1.3',
+              name: 'Discover and Strengthen Your Local Community',
+              summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
+              valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
+              solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+              image: './img/opportunity-local-community.jpg',
+              link: '#opportunity-local-community',
             }
           ]
         },
@@ -1022,6 +1192,34 @@ new Vue({
                 },
               ]
             }
+          ],
+          introOpportunities: "[INTRO Opportunities]",
+          opportunities: [
+            {
+              subtitle: 'Opportunity #1.1',
+              name: 'Discover and Strengthen Your Local Community',
+              summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
+              valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
+              solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+              image: './img/opportunity-local-community.jpg',
+              link: '#opportunity-local-community',
+            }, {
+              subtitle: 'Opportunity #1.2',
+              name: 'Discover and Strengthen Your Local Community',
+              summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
+              valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
+              solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+              image: './img/opportunity-local-community.jpg',
+              link: '#opportunity-local-community',
+            }, {
+              subtitle: 'Opportunity #1.3',
+              name: 'Discover and Strengthen Your Local Community',
+              summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
+              valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
+              solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+              image: './img/opportunity-local-community.jpg',
+              link: '#opportunity-local-community',
+            }
           ]
         }
       ]
@@ -1033,6 +1231,10 @@ new Vue({
 
     getTrends: function () {
       return this.themes[0].trends.concat(this.themes[1].trends).concat(this.themes[2].trends)
+    },
+
+    getOpportunities: function () {
+      return this.themes[0].opportunities.concat(this.themes[1].opportunities).concat(this.themes[2].opportunities)
     }
   }
 });

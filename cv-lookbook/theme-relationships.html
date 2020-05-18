@@ -62,6 +62,20 @@
 			<cv-trend-details v-bind:t="themes[0].trends[1]"></cv-trend-details>
 			<cv-trend-details v-bind:t="themes[0].trends[2]"></cv-trend-details>
 
+
+			<section class="vc_row pt-20 pb-20 section-colored">
+				<div class="container">
+
+					<cv-headline subtitle="The Opportunity Perspective" v-bind:title="themes[0].introOpportunities"></cv-headline>
+					<cv-tiles v-bind:t="themes[0].opportunities" isSmall></cv-tiles>
+
+				</div><!-- /.container -->
+			</section><!-- /.vc_row -->
+
+			<cv-opportunity-details v-bind:o="themes[0].opportunities[0]"></cv-opportunity-details>
+			<cv-opportunity-details v-bind:o="themes[0].opportunities[1]"></cv-opportunity-details>
+			<cv-opportunity-details v-bind:o="themes[0].opportunities[2]"></cv-opportunity-details>
+
 		</main><!-- /#content.content -->
 
 		<cv-page-footer></cv-page-footer>

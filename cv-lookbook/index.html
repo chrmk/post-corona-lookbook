@@ -140,7 +140,7 @@
 			</section><!-- /.vc_row -->
 
 
-			<section class="vc_row pt-60 pb-20">
+			<section class="vc_row pt-40 pb-20">
 				<div class="container">
 
 					<cv-headline 
@@ -162,7 +162,6 @@
 													<li data-filter=".micro"><span>Micro</span></li>
 													<li data-filter=".macro"><span>Macro</span></li>
 													<li data-filter=".society"><span>Society</span></li>
-													<li data-filter=".technology"><span>Technology</span></li>
 													<li data-filter=".business"><span>Business</span></li>
 												</ul>
 											</div><!-- /.liquid-filter-items-inner -->
@@ -174,6 +173,33 @@
 							
 									<cv-trend-masonry
 										v-for="trend in getTrends()"
+										v-bind:trend="trend"
+									></cv-trend-masonry>
+
+								</div><!-- /.row liquid-portfolio-list-row -->						
+							</div><!-- /.liquid-portfolio-list -->
+						</div><!-- /.col-md-12 -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</section>
+
+
+			<section class="vc_row pt-40 pb-20 section-colored">
+				<div class="container">
+
+					<cv-headline 
+						subtitle="The Business Opportunities"
+						title="[WE IDENTIFIED BUSINESS OPPORTUNITIES]" 
+					></cv-headline>
+
+					<div class="row">
+						<div class="lqd-column col-md-12">
+							<div class="liquid-portfolio-list">
+							
+								<div class="row liquid-portfolio-list-row" data-liquid-masonry="true" data-masonry-options='{ "filtersID": "#pf-grid-1" }'>
+							
+									<cv-trend-masonry
+										v-for="trend in getOpportunities()"
 										v-bind:trend="trend"
 									></cv-trend-masonry>
 
