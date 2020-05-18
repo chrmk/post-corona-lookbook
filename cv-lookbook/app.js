@@ -46,7 +46,7 @@ Vue.component('cv-page-header', {
                   data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }' data-localscroll="true">
 
                   <li>
-                    <a href="#content">
+                    <a href="./index.html">
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
@@ -56,7 +56,7 @@ Vue.component('cv-page-header', {
                   </li>
 
                   <li>
-                    <a href="#theme-relationships">
+                    <a href="./theme-relationships.html">
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
@@ -66,7 +66,7 @@ Vue.component('cv-page-header', {
                   </li>
 
                   <li>
-                    <a href="#theme-wellbeing">
+                    <a href="./theme-wellbeing.html">
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
@@ -76,7 +76,7 @@ Vue.component('cv-page-header', {
                   </li>
 
                   <li>
-                    <a href="#theme-leisure">
+                    <a href="./theme-leisure.html">
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
@@ -85,16 +85,16 @@ Vue.component('cv-page-header', {
                     </a>
                   </li>
                   <li>
-                    <a href="#opportunities">
+                    <a href="conversio.html">
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
-                        <span class="txt">Opportunity: <br />Conversio</span>
+                        <span class="txt">Case Study: <br />Conversio</span>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="#about">
+                    <a href="./about.html">
                       <span class="link-icon"></span>
                       <span class="link-txt">
                         <span class="link-ext"></span>
@@ -152,7 +152,7 @@ Vue.component('cv-about-team', {
           data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":100,"initValues":{"translateY":80,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
           <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Our Team</h6>
           <h2 class="mt-4 mb-4">
-          Great things in business are never done by one person.
+          Great Things are Never Done by One Person.
           </h2>
         </header><!-- /.fancy-title -->
       </div><!-- /.col-md-8 col-md-offset-2 -->
@@ -581,8 +581,8 @@ Vue.component('cv-trend-masonry', {
         <div class="ld-pf-inner">
           <div class="ld-pf-image">
             <figure><img :src=trend.image :alt=trend.name></figure>
-            <div class="ld-pf-bg bg-gradient-primary-lr opacity-09">
-              <a :href=trend.link class="btn btn-xsm btn-naked font-weight-bold text-white" style="white-space: normal; padding: 30px; line-height: 1.5;">
+            <div class="ld-pf-bg bg-gradient-primary-lr opacity-09" data-localscroll="true">
+              <a :href=trend.link class="btn btn-xsm btn-naked font-weight-bold text-white" style="white-space: normal; padding: 30px; line-height: 1.5;" data-localscroll="true">
                 <span><span class="btn-txt">{{ trend.name }}</span></span>
               </a>
             </div><!-- /.ld-pf-bg -->
@@ -879,7 +879,7 @@ new Vue({
               category: ['short-term', 'long-term', 'micro', 'society'],
               signals: [
                 {
-                  text: "45 % of US adults claim that their mental health has been negatively impacted due to anxiety and stress caused by covid-19, a KFF poll shows.",
+                  text: "45 % of US adults claim that their mental health has been negatively impacted due to anxiety and stress caused by COVID-19, a KFF poll shows.",
                   source: "Kaiser Family Foundation",
                   link: "https://www.kff.org/health-reform/issue-brief/the-implications-of-covid-19-for-mental-health-and-substance-use/"
                 }, {
@@ -902,7 +902,7 @@ new Vue({
               category: ['short-term', 'long-term', 'micro', 'society'],
               signals: [
                 {
-                  text: "Research conducted by Wissenschaftszentrum Berlin für Sozialforschung shows a slight tendency of women rather not working during Covid compared to men, especially if their are parents",
+                  text: "Research conducted by Wissenschaftszentrum Berlin für Sozialforschung shows a slight tendency of women rather not working during COVID-19 compared to men, especially if their are parents",
                   source: "Wissenschaftszentrum Berlin",
                   link: "https://wzb.eu/system/files/docs/dsi/af/Erwerbsarbeit%20in%20Zeiten%20von%20Corona.pdf"
                 }, {
@@ -921,7 +921,7 @@ new Vue({
               summary: 'School closures substantially disrupt the lives of students and their families and pose long-lasting risks for child health.',
               detail: 'The unique combination of social isolation together with a public health crisis, and an upcoming economic recession lead to more expected cases of mental disorders among children. Since mental problems during childhood are often a life-long burden for individuals, we face generation-wide long-term effects on child health.',
               image: './img/trend-child-development.jpg',
-              link: '#social-child-development',
+              link: '#trend-child-development',
               category: ['long-term', 'macro', 'society'],
               signals: [
                 {
@@ -955,7 +955,7 @@ new Vue({
               summary: "In the years to come, different approaches of interactive live streaming of concerts could rise.",
               detail: "As the music industry has migrated to streaming, touring has become critical to financial success. In response to the coronavirus pandemic, artists are playing virtual concerts on social media platforms and video games like Fortnite. Online concerts open up new possibilities in terms of geographical availability, as well as other ways to interact with the audience. Additionally, it may drive humans to perform music together during these events. It could very well be a test case for more concert experiences migrating online in the future. Nevertheless, the willingness to spend on a virtual version of a performance is yet to be assessed.",
               image: './img/trend-idols.jpg',
-              link: '#social',
+              link: '#trend-idols',
               category: ['long-term', 'macro', 'business', 'society'],
               signals: [
                 {
@@ -978,7 +978,7 @@ new Vue({
               summary: "Life Simulator online communities provide a perfect escapist entertainment, offering gentle and comforting realities.",
               detail: "While the pandemic and ensuing lockdown have dramatically changed the way we live our lives, video games offer a way to safely indulge in our basic human need to connect. Video games are letting people chat, connect, and meet new people. Video game makers are banding together to promote gaming as a healthy means of social connection. Life Simulator online communities are a way to escape into gentle and comforting worlds. The activities they involve allow players to feel a sense of normalcy and security, and the gameplay is built around the relationships with like-minded players.",
               image: './img/trend-microworlds.jpg',
-              link: '#social',
+              link: '#trend-microworlds',
               category: ['long-term', 'society'],
               signals: [
                 {
@@ -1001,7 +1001,7 @@ new Vue({
               summary: 'Athletes may be training alone, but they can still feel part of a larger group.',
               detail: 'With gyms and sport clubs closing their doors to curb the coronavirus outbreak, people are turning to online alternatives to maintain their sports routines. At-home training classes and virtual races connect yogis, runners and cyclists in times of social distancing and, thus, help them to remain motivated. Athletes train and compete on their own, and then connect with others through online results and narratives.',
               image: './img/trend-training.jpg',
-              link: '#long-distance-buddies',
+              link: '#trend-training',
               category: ['short-term', 'business'],
               signals: [
                 {

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#3ed2a7">
+
+	<link rel="shortcut icon" href="./favicon.png" />
+
+	<title>Social Bonding Post-Corona | CDTM CenterVenture 2020</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/vendors/liquid-icon/liquid-icon.min.css" />
+	<link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/theme-vendors.min.css" />
+	<link rel="stylesheet" href="assets/css/theme.min.css" />
+	<link rel="stylesheet" href="assets/css/themes/creative.css" />
+
+	<!-- Head Libs -->
+	<script async src="assets/vendors/modernizr.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<style>
+		#primary-nav li {
+			line-height: 1;
+		}
+		section.section-colored {
+			background: rgba(249, 184, 81, .15);
+		}
+	</style>
+
+	<!-- <meta http-equiv="refresh" content="3" > -->
+
+</head>
+
+<body data-mobile-nav-trigger-alignment="right" data-mobile-nav-align="left" data-mobile-nav-style="modern"
+	data-mobile-nav-shceme="gray" data-mobile-header-scheme="gray" data-mobile-nav-breakpoint="1199">
+
+	<div id="wrap">
+
+		<cv-page-header></cv-page-header>
+
+		<main id="content" class="content">
+
+			<cv-theme-header v-bind:theme="themes[1]"></cv-theme-header>
+
+			<section class="vc_row pt-20 pb-20 section-colored">
+				<div class="container">
+
+					<cv-headline subtitle="The Trend Perspective" v-bind:title="themes[1].introTrends"></cv-headline>
+					<cv-tiles v-bind:t="themes[1].trends" isSmall></cv-tiles>
+
+				</div><!-- /.container -->
+			</section><!-- /.vc_row -->
+
+			<cv-trend-details v-bind:t="themes[1].trends[0]"></cv-trend-details>
+			<cv-trend-details v-bind:t="themes[1].trends[1]"></cv-trend-details>
+			<cv-trend-details v-bind:t="themes[1].trends[2]"></cv-trend-details>
+
+		</main><!-- /#content.content -->
+
+		<cv-page-footer></cv-page-footer>
+
+	</div><!-- /#wrap -->
+
+	<script src="./assets/vendors/jquery.min.js"></script>
+	<script src="./assets/js/theme-vendors.js"></script>
+	<script src="./assets/js/theme.min.js"></script>
+
+	<!-- Vue.js custom files -->
+	<script src="app.js"></script>
+
+</body>
+
+</html>
