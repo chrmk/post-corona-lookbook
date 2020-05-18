@@ -127,10 +127,19 @@ Vue.component('cv-page-footer', {
 
           <div class="lqd-column col-md-6 col-md-offset-3 text-center">
 
-            <figure class="mb-40">
+            <figure>
               <img src="./img/logo.png" alt="Logo">
             </figure>
-
+            <p class="mb-1">Do you have ideas, comments, or feedback?</p>
+            <a href="https://forms.gle/SZ7uAM2ouZY97E3K6"
+              class="btn btn-solid btn-lg semi-round btn-gradient font-size-10 font-weight-bold lh-2 mb-2"
+              target="_blank">
+              <span>
+                <span class="btn-gradient-bg"></span>
+                <span class="btn-txt">We are happy to hear more!</span>
+                <span class="btn-gradient-bg btn-gradient-bg-hover bg-primary"></span>
+              </span>
+            </a>
             <p>© 2020 CDTM</p>
 
           </div><!-- /.col-md-6 -->
