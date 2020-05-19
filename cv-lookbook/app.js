@@ -838,7 +838,7 @@ new Vue({
             ]
           },
         ],
-        introOpportunities: "Finding new ways of getting close with family and friends from near and far.",
+        introOpportunities: "Finding New Ways of Getting Close with Family and Friends from Near and Far",
         opportunities: [
           {
             subtitle: 'Opportunity #1.1',
@@ -863,16 +863,16 @@ new Vue({
       {
         subtitle: "Theme #2",
         name: "Promoting Mental and Physical Wellbeing",
-        summary: "COVID-19 poses severe threats not only to physical but also mental wellbeing of global society. Research shows that previous outbreaks of similar diseases have had lasting mental health effects, undermining the importance of proactive efforts. Moreover, subsequent habit formation during a lockdown suggests that emerging health trends will not regress in post-crisis scenarios. Consequently, besides a general acceleration of mental health problems, we expect tendencies towards a retraditionalization of gender roles, increased risks in child development, rising demand for online health care, and a trend to home cooking to substantially affect society in the long-run.",
+        summary: "COVID-19 poses severe threats not only to physical but also mental wellbeing of global society. Research shows that previous outbreaks of similar diseases have had lasting mental health effects, reinforcing the importance of proactive efforts. Moreover, subsequent habit formation during a lockdown suggests that emerging health trends will not regress in post-crisis scenarios. Consequently, besides a general acceleration of mental health problems, we expect tendencies towards a retraditionalization of gender roles, increased risks in child development, rising demand for online health care, and a trend to home cooking to substantially affect society in the long-run.",
         image: "./img/theme-wellbeing.jpg",
         link: "./theme-wellbeing.html",
-        introTrends: "[INTRO TRENDS]",
+        introTrends: "Social Distancing Affects Our Health Across All Age Groups and Genders in an Unprecedented Way",
         trends: [
           {
             subtitle: 'Trend #2.1',
-            name: 'Increased Mental Health Issues as Isolation Aftermath',
+            name: 'Mental Health Issues as Isolation Aftermath',
             summary: 'With 2.6 bn people in some sort of isolation, we are conducting the largest psychological experiment ever, facing the risk of severe mental health issues.',
-            detail: 'During the outbreak of the virus, a negative impact on the mental health of the whole society can be perceived. Especially for those with poor health conditions the impact is significant. However, these short-term effects manifest in long-term habits as research about previous outbreaks shows, suggesting that proactive measures have to be undertaken. Consequently, the need for psychological care is rising.',
+            detail: 'During the outbreak of the virus, a negative impact on the mental health of the whole society can be perceived. Especially for those with poor health conditions, the impact is significant. However, these short-term effects manifest in long-term habits as research about previous outbreaks shows, suggesting that proactive measures have to be undertaken. Consequently, the need for psychological care is rising.',
             image: './img/trend-mental-health.jpg',
             id: 'trend-mental-health',
             link: './theme-wellbeing.html#trend-mental-health',
@@ -883,11 +883,11 @@ new Vue({
                 source: "Kaiser Family Foundation",
                 link: "https://www.kff.org/health-reform/issue-brief/the-implications-of-covid-19-for-mental-health-and-substance-use/"
               }, {
-                text: "Especially for those with poor health status, the crisis asks its toll (53% of these participants claim a negative impact).",
+                text: "Especially for those with poor health status, the crisis takes its toll (53% of these participants claim a negative impact).",
                 source: "Kaiser Family Foundation",
                 link: "https://www.kff.org/health-reform/issue-brief/the-implications-of-covid-19-for-mental-health-and-substance-use/"
               }, {
-                text: "Given the pressure on mental health experienced through COVID, WHO released a list of considerations for how to foster mental well-being ",
+                text: "Given the pressure on mental health experienced through COVID-19, the WHO released a list of considerations for how to foster mental well-being.",
                 source: "WHO",
                 link: "https://www.who.int/docs/default-source/coronaviruse/mental-health-considerations.pdf"
               }
@@ -896,18 +896,18 @@ new Vue({
             subtitle: 'Trend #2.2',
             name: 'Moving Back to Traditional Gender Roles',
             summary: 'For families with underaged children, the corona crisis is especially challenging.',
-            detail: 'Schools are closed and children have to be taken care of at home - while simultaneously balancing remote work. First surveys and studies show that this could lead to a retraditionalization of role models. It can be observed that mothers tend to overtake more of caretaking, working less in their pay jobs. If one considers that leaders are forged in crisis, this tendency could impact careers significantly. Politics and institutions, like the Bertelsmann Stiftung, raise concerns that these could foster the inequality dynamics between genders even more.',
+            detail: 'Schools are closed and children have to be taken care of at home - while simultaneously balancing remote work. First surveys and studies show that this could lead to a retraditionalization of gender roles. It can be observed that mothers tend to overtake more of caretaking, working less in their paid jobs. If one considers that leaders are forged in crisis, this tendency could impact careers significantly. Politics and institutions, like the Bertelsmann Stiftung, raise concerns that these could foster the inequality dynamics between genders even more.',
             image: './img/trend-gender-roles.jpg',
             id: 'trend-gender-roles',
             link: './theme-wellbeing.html#trend-gender-roles',
-            category: ['short-term', 'long-term', 'micro', 'society'],
+            category: ['long-term', 'macro', 'business', 'society', 'political'],
             signals: [
               {
-                text: "Research conducted by Wissenschaftszentrum Berlin für Sozialforschung shows a slight tendency of women rather not working during COVID-19 compared to men, especially if their are parents",
+                text: "Research conducted by Wissenschaftszentrum Berlin für Sozialforschung shows a slight tendency of women not working during COVID-19 compared to men, especially if they are parents",
                 source: "Wissenschaftszentrum Berlin",
                 link: "https://wzb.eu/system/files/docs/dsi/af/Erwerbsarbeit%20in%20Zeiten%20von%20Corona.pdf"
               }, {
-                text: "The amount mothers of children under 16 years spend for housework and caretaking rose from 6.9 to 8.2 hours per day, according to the Mannheimer Corona-Study.",
+                text: "The amount of time mothers of children under 16 years spend for housework and caretaking rose from 6.9 to 8.2 hours per day, according to the Mannheimer Corona-Study.",
                 source: "University of Mannheim",
                 link: "https://www.uni-mannheim.de/gip/corona-studie/"
               }, {
@@ -918,20 +918,20 @@ new Vue({
             ]
           }, {
             subtitle: 'Trend #2.3',
-            name: 'Increased Risks in Child Development',
+            name: 'Increasing Risks in Child Development',
             summary: 'School closures substantially disrupt the lives of students and their families and pose long-lasting risks for child health.',
             detail: 'The unique combination of social isolation together with a public health crisis, and an upcoming economic recession lead to more expected cases of mental disorders among children. Since mental problems during childhood are often a life-long burden for individuals, we face generation-wide long-term effects on child health.',
             image: './img/trend-child-development.jpg',
             id: 'trend-child-development',
             link: './theme-wellbeing.html#trend-child-development',
-            category: ['long-term', 'macro', 'society'],
+            category: ['long-term', 'macro', 'society', 'political'],
             signals: [
               {
                 text: "Children are among the most severely impacted victims of COVID-19.",
                 source: "Unicef",
                 link: "https://www.unicef.org/press-releases/dont-let-children-be-hidden-victims-covid-19-pandemic"
               }, {
-                text: "The coronavirus pandemic and the unprecedented measures to contain its spread are disrupting nearly every aspect of children’s lives.",
+                text: "The coronavirus pandemic and the unprecedented measures to contain its spread are disrupting nearly every aspect of children's lives.",
                 source: "World Economic Forum",
                 link: "https://www.weforum.org/agenda/2020/05/covid-19-is-hurting-childrens-mental-health/"
               }, {
@@ -942,23 +942,23 @@ new Vue({
             ]
           }
         ],
-        introOpportunities: "[INTRO Opportunities]",
+        introOpportunities: "How Can We Take Care of Ourselves and Our Loved Ones?",
         opportunities: [
           {
             subtitle: 'Opportunity #2.1',
             name: 'The Online Nanny for Remote Childcare',
-            summary: 'Modern parents often face severe time- and stress-issues when it comes to proper childcare. Especially during a lockdown situation, where parents work from home, they have to take care of two jobs at once: Their actual job, and supervision as well as care for their children. And not only during work, also while shopping, on vacation or in the backseat of your car, too little attention is paid to the child. Good nannies are location-bound, expensive, hard to find, not easy exchangeable, and not even an option in a lockdown scenario.',
-            valueproposition: 'Our smart online nanny platform, helps overstrained parents who are busy with their jobs and other obligations and who want to have their child receive individual, meaningful, creative and intellectual on-demand care, regardless of their location and time, by offering multi-talented, quickly available and reliable nannies via video-chat. Additionally, we help professional (and hobby-) nannies to perform their job from home during lockdown or in other remote scenarios (geographic reasons, disability, etc.).',
-            solutionsketch: "We offer an online nanny platform with a video-chat function to bring professional nannies and parents in need together. Parents can choose the perfect nanny for their kids by doing screening interviews and referring to ratings, experience reports, or fields of expertise. Also nannies can write experience reports and progress analysis for the family to pass them over to succeeding nannies and track the progress and behaviour of their child. Nannies can be booked on-demand for an hour or on a regular basis over the period of several days or months. Whenever nannies observe behaviour of the child where a person is needed onsite, they can call the mother or other emergency contacts at any time. The solution does not fully replace a non-remote nanny, but it is surely is a solution for home office scenarios, homework help, or spontaneous short-time needs.",
+            summary: 'Modern parents often face severe time and stress issues when it comes to proper childcare. Especially during a lockdown situation, where parents work from home, they have to take care of two jobs at once: Their actual job, and supervision as well as care for their children. And not only during work, but also while shopping, on vacation or in the backseat of your car, parents always worry that too little attention is paid to the child. Good nannies are location-bound, hard to find, not easily exchangeable, and not even an option in a lockdown scenario.',
+            valueproposition: 'Our smart online nanny platform helps overworked parents who are busy with their jobs and other obligations and who want to have their child receive individual, meaningful, creative and intellectual on-demand care. Regardless of their location and time, we support working parents by offering multi-talented, quickly available, and reliable nannies via video-chat. Additionally, we help professional (and hobby-) nannies to perform their job from home during a lockdown or in other remote scenarios (geographic reasons, disability, etc.).',
+            solutionsketch: "We offer an online nanny platform with a video-chat function to bring professional nannies and parents in need together. Parents can choose the perfect nanny for their kids by doing screening interviews and referring to ratings, experience reports, or fields of expertise. Also nannies can write experience reports and progress analysis for the family to pass them over to succeeding nannies and track the progress and behavior of their child. Nannies can be booked on-demand for an hour or on a regular basis over a period of several days or months. Whenever nannies observe a situation where a person is needed onsite, they can call the mother or other emergency contacts at any time. The solution does not fully replace a non-remote nanny, but it surely is a solution for home office scenarios, homework help, or spontaneous short-time needs.",
             image: './img/opportunity-online-nanny.jpg',
             id: 'opportunity-online-nanny',
             link: './theme-wellbeing.html#opportunity-online-nanny',
           }, {
             subtitle: 'Opportunity #2.2',
             name: 'Smart Recipe App With a Grocery Delivery Service',
-            summary: 'Cooking at home is a hobby for a lot of people, however, before you can start, you need to invest a lot of time in it. First you need to spend hours to decide on a recipe, then go grocery shopping and struggle to find all the right ingredients. Especially in those times, when grocery shopping poses a threat to your health and you need to take proactive measures to protect oneself by wearing a mask or gloves, it would be great if you could omit these parts.',
-            valueproposition: 'Our app helps to solve this problem by intelligent proposals for your next recipes, based on your past tastes, making decisions on the next meal fast and easy. Moreover you will not need to go grocery shopping ever again, as our partner will deliver the ingredients for your recipes to your doorstep within couple of hours.',
-            solutionsketch: "TODO!!",
+            summary: 'Cooking at home is a hobby for a lot of people. However, before you can start, you need to invest a lot of time in it. First you need to spend hours deciding on a recipe, then go grocery shopping and struggle to find all the right ingredients. Especially in times, when grocery shopping poses a threat to your health and you need to take proactive measures to protect yourself and others, it would be great if these parts could be omitted.',
+            valueproposition: 'Our app helps people who like to cook but suffer from a lack of time or would like to spend their time more consciously. It simplifies the recepy choice and optimizes the grocery shopping, such that there is more time to concentrate on the cooking itself.',
+            solutionsketch: "The app solves this problem by providing intelligent proposals for your next recipes, based on your past tastes, making decisions on the next meal fast and easy. Moreover, the time for grocery shopping can be saved too, as our partner will deliver the exact amount of the ingredients for your recipes to your doorstep within couple of hours.",
             image: './img/opportunity-smart-recipe.jpg',
             id: 'opportunity-smart-recipe',
             link: './theme-wellbeing.html#opportunity-smart-recipe',
@@ -988,7 +988,7 @@ new Vue({
                 source: "Techcrunch",
                 link: "https://techcrunch.com/2020/04/24/fortnite-hosted-a-psychedelic-travis-scott-concert-and-12-3m-people-watched/"
               }, {
-                text: "In June 2017, the One Love Manchester benefits concert, which featured several famous musicians, raised 3m USD and accumulated over 14.5m views.",
+                text: "In June 2017, the One Love Manchester benefit concert, which featured several famous musicians, raised 3m USD and accumulated over 14.5m views.",
                 source: "CNBC",
                 link: "https://www.cnbc.com/2020/03/19/chris-martin-bono-and-future-of-virtual-concert-after-coronavirus.html"
               }, {
@@ -1005,7 +1005,7 @@ new Vue({
             image: './img/trend-microworlds.jpg',
             id: 'trend-microworlds',
             link: './theme-leisure.html#trend-microworlds',
-            category: ['long-term', 'society'],
+            category: ['long-term', 'micro', 'business', 'society'],
             signals: [
               {
                 text: "Kind Words is a game that helps players in lockdown communicate with strangers. In it, an avatar sits at a desk in a digital bedroom and types out questions about real-world personal problems. In return, other players respond with encouraging notes.",
@@ -1042,7 +1042,7 @@ new Vue({
                 link: "https://www.redbull.com/int-en/wings-for-life-world-run-2020-event-report",
                 category: ['long-term', 'society'],
               }, {
-                text: "Virtual workout class providers (such as Daily Burn) seen a 268% year-over-year increase in membership signups.",
+                text: "Virtual workout class providers (such as Daily Burn) have seen a 268% year-over-year increase in membership signups.",
                 source: "Business Insider",
                 link: "https://www.businessinsider.com/gyms-closing-coronavirus-home-workout-apps-2020-3",
                 category: ['short-term', 'business'],
