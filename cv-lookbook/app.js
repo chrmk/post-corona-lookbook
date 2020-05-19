@@ -189,17 +189,17 @@ Vue.component('cv-about-team', {
 
 Vue.component('cv-about-zukunftsinstitut', {
   template: `
-    <section class="vc_row pt-80 pb-80" id="zukunftsinstitut">
+    <section class="vc_row pt-40 pb-40" id="zukunftsinstitut">
       <div class="container">
 
         <div class="row">
           <div class="lqd-column col-md-10 col-md-offset-1">
-            <header class="fancy-title text-center mb-75" data-custom-animations="true"
+            <header class="fancy-title text-center mb-0" data-custom-animations="true"
               data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":100,"initValues":{"translateY":80,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
               <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">Building on the Shoulders of Others</h6>
-              <h2 class="mt-4 mb-4">
-                Scenarios of a Post-Corona World by the Zukunftsinstitut
-              </h2>
+              <h3 class="mt-4 mb-4">
+                We build upon the Post-Corona Scenarios developed by the Zukunftsinstitut
+              </h3>
             </header><!-- /.fancy-title -->
           </div><!-- /.col-md-8 col-md-offset-2 -->
         </div><!-- /.row -->
@@ -208,7 +208,7 @@ Vue.component('cv-about-zukunftsinstitut', {
 
           <div class="lqd-column col-md-6">
 
-            <h4 class="text-center">Scenario 1</h4>
+            <h4 class="text-center">Scenario: Total Isolation</h4>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/peOlsJ1YT3E" frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
@@ -217,7 +217,7 @@ Vue.component('cv-about-zukunftsinstitut', {
 
           <div class="lqd-column col-md-6">
 
-            <h4 class="text-center">Scenario 2</h4>
+            <h4 class="text-center">Scenario: Neo-Tribes</h4>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/kf8twOATaTE" frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
@@ -226,7 +226,7 @@ Vue.component('cv-about-zukunftsinstitut', {
 
           <div class="lqd-column col-md-6">
 
-            <h4 class="text-center">Scenario 3</h4>
+            <h4 class="text-center">Scenario: Permanent Crisis</h4>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/aDPcg0p-bAc" frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
@@ -235,8 +235,8 @@ Vue.component('cv-about-zukunftsinstitut', {
 
           <div class="lqd-column col-md-6">
 
-            <h4 class="text-center">Scenario 4</h4>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/luZgKAET4t4" frameborder="0"
+            <h4 class="text-center">Scenario: Resilient Society</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wkEje5N8yq4" frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
 
@@ -250,7 +250,7 @@ Vue.component('cv-about-zukunftsinstitut', {
 
 Vue.component('cv-about-cdtm', {
   template: `
-    <section class="vc_row pt-60 pb-60 mt-90" id="about">
+    <section class="vc_row pt-40 pb-40 mt-60">
       <div class="container">
         <div class="row d-flex flex-wrap align-items-center">
 
@@ -378,6 +378,56 @@ Vue.component('cv-theme-header', {
                   <figure>
                     <img  :src=theme.image :alt=theme.name />
                   </figure>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col-lg-6 col-md-5 col-md-offset-1 -->
+
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+  `,
+});
+
+Vue.component('cv-casestudy', {
+  props: ['theme'],
+  methods: {
+    getLinkID: function (link) {
+      return link.replace('#', '')
+    }
+  },
+  template: `
+    <section class="vc_row pt-120 pb-60" :id=getLinkID(theme.link)>
+      <div class="container">
+        <div class="row d-flex flex-wrap align-items-center">
+
+          <div class="lqd-column col-lg-5 col-md-6 mb-5 mb-md-0" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview","animationTarget":"all-childs","duration":1200,"delay":160,"initValues":{"translateY":50,"opacity":0},"animations":{"translateY":0,"opacity":1}}'>
+
+            <header class="fancy-title mb-60">
+              <h6 class="text-uppercase ltr-sp-2 font-size-12 font-weight-semibold text-secondary">{{ theme.subtitle }}</h6>
+              <h2 class="mt-4 mb-4">{{ theme.name }}</h2>
+              <p>{{ theme.summary }}</p>
+
+              <p class="pt-20">
+                <a :href=theme.link class="btn btn-solid text-uppercase circle btn-bordered border-thin font-size-14 font-weight-semibold">
+                  <span>
+                    <span class="btn-txt">More about CONVERSIO</span>
+                  </span>
+                </a>
+              </p>
+
+            </header><!-- /.fancy-title -->
+          </div><!-- /.col-lg-5 col-md-6 -->
+
+          <div class="lqd-column col-lg-6 col-md-5 col-md-offset-1">
+            <div class="liquid-img-group-single stretch-to-right" data-shadow-style="4" data-roundness="4" data-inview="true" data-animate-shadow="true" data-reveal="true" data-reveal-options='{"direction":"rl","bgcolor":"rgb(25, 38, 47)"}'>
+              <div class="liquid-img-group-img-container">
+                <div class="liquid-img-container-inner">
+                  <a :href=theme.link>
+                    <figure>
+                      <img  :src=theme.image :alt=theme.name />
+                    </figure>
+                  </a>
                 </div>
               </div>
             </div>
@@ -695,12 +745,19 @@ new Vue({
   el: '#wrap',
   data: {
     overviewTitle: "Social Bonding in a Post-Corona World",
-    overviewText: "With our business opportunity lookbook we help people whose personal relationships suffer from contact restrictions and who want to feel connected.",
+    overviewText: "With our business opportunity lookbook, we want to inspire future innovators to help people whose personal relationships suffered from contact restrictions due to Corona. We uncover promising business opportunities to strengthen social bond for a post-corona world. Furthermore, we present CONVERSIO, a product vision of a board game that fosters meaningful conversations. What are your ideas to help our society into a post-corona world?",
+    casestudy: {
+      subtitle: 'Case Study',
+      name: 'CONVERSIO - A Board Game for Meaningful Conversations',
+      summary: 'We elaborated one business opportunity and developed a concept for a board game called CONVERSIO. CONVERSIO is a fun and mindful game for anyone who wants to have a meaningful conversations with friends, family and partners - no matter where you are.',
+      image: './img/conversio-casestudy.jpg',
+      link: './conversio.html'
+    },
     themes: [
       {
         subtitle: "Theme #1",
         name: "Boosting Our Existing Social Bonds",
-        summary: "Social distancing is an unprecedented challenge for humans as it deprives us of most physical connections with other people and alters the few social interactions still allowed. At the same time, the COVID-19 measures highlight pre-crisis societal trends such as increasing isolation and loneliness, long-distance relationships, and new work. While our lifestyle has radically changed over the last decades, the fundamental need for meaningful relationships has not. Boosting social bonds, therefore, requires different approaches than throughout most of our evolutionary history, not only during this crisis, but also in a Post-Corona world.",
+        summary: "Social distancing is an unprecedented challenge for humans. It deprives us of most physical connections with other people and alters the few social interactions still allowed. At the same time, the COVID-19 measures highlight pre-crisis societal trends such as increasing isolation and loneliness, long-distance relationships, and new work. While our lifestyle has radically changed over the last decades, the fundamental need for meaningful relationships has not. Boosting social bonds, therefore, requires different approaches than throughout most of our evolutionary history, not only during this crisis, but also in a Post-Corona world.",
         image: "./img/theme-social-bonds.jpg",
         link: "./theme-relationships.html",
         introTrends: "A Globalized Society Turns Towards Old and New Forms of Creating a Sense of Community",
@@ -709,11 +766,11 @@ new Vue({
             subtitle: 'Trend #1.1',
             name: 'Search for Community & Belonging',
             summary: 'In moments of crisis, humans naturally turn to communities in search for emotional support.',
-            detail: 'The lifestyle of many Europeans before the crisis was mostly individualistic, focusing on personal achievements and experiences. One consequence of COVID-19 might be a prioritization of community experiences and life over detached individualism. People will value the social bonds created with their local environment during the crisis. The search for communities could be reflected in consumer decisions (e.g. focus on local shops) as well as lifestyle choices (e.g. preference of smaller cities/villages compared to megacities).',
+            detail: 'The lifestyle of many Europeans before the crisis was mostly individualistic, focusing on personal achievements and experiences. One consequence of COVID-19 is the prioritization of community experiences over detached individualism. People value the social bonds created with their local environment during the crisis. The search for communities is reflected in consumer decisions (e.g. focus on local shops) as well as lifestyle choices (e.g. preference of smaller cities/villages compared to megacities).',
             image: './img/trend-community.jpg',
             id: 'trend-community',
             link: './theme-relationships.html#trend-community',
-            category: ['short-term', 'macro', 'society'],
+            category: ['short-term', 'long-term', 'macro', 'society'],
             signals: [
               {
                 text: "Local solidarity: Local community initiatives have risen all around the world. Examples are the COVID-19 Mutual Aid UK network focusing on neighborhood support or platforms like Helfen.Berlin, which sell coupons for local shops.",
@@ -725,31 +782,31 @@ new Vue({
                 link: "https://www.rnd.de/politik/corona-und-die-zukunft-schone-neue-welt-schlimme-neue-welt-TM7HQIHASNAI5L6QXUKQYD4XSM.html"
               }, {
                 text: 'Anonymity in cities: Even though we live in crowded cities, we are only loosely connected to the local networks in them, "never knowing who neighbors are or who lives in the flat downstairs."',
-                source: "SOURCE",
-                link: "LINK"
+                source: "CityMetric",
+                link: "https://www.citymetric.com/horizons/why-living-big-city-so-isolating-lonely-isolation-loneliness-4210"
               }
             ]
           },
           {
             subtitle: 'Trend #1.2',
-            name: 'Increased Loneliness',
+            name: 'Growing Feelings of Loneliness',
             summary: 'Despite ever growing cities and denser populated areas, loneliness has been increasing throughout the past decades.',
-            detail: 'The Zukunftsinstut has called it "monster of modernity" and symptom of "hypercivilization". COVID-19 has shed light on this long-existing problem as many people feel the hardship of lacking social interactions. Reasons for feeling lonely are manifold, including declining community structures, religiosity, and multi-generation households and increasing social media usage. But loneliness is also receiving more political, business and health care system attention, as it is freed from taboos long associated with psychological problems and is acknowledged as a large-scale problem.',
+            detail: 'The Zukunftsinstut has called it "monster of modernity" and symptom of "hypercivilization". COVID-19 has shed light on this long-existing problem as many people feel the hardship of lacking social interactions. Reasons for feeling lonely are manifold, including the decline of community structures, religiosity, and multi-generation households and increasing social media usage. But loneliness is also receiving more attention by politics, businesses and health care systems , as it is freed from stigma and acknowledged as a large-scale problem.',
             image: './img/trend-loneliness.jpg',
             id: 'trend-loneliness',
             link: './theme-relationships.html#trend-loneliness',
             category: ['long-term', 'macro', 'society'],
             signals: [
               {
-                text: '16% of people in Germany feel lonely or extremely lonely according to a recent survey. This is frightening, but in fact only slightly more than in pre-corona times. Loneliness is a symptom of "hypercivilization”, according to the Zukunftsinstitut.',
+                text: '16% of people in Germany feel lonely or extremely lonely according to a recent survey. Though this seems alarming, this number is only slightly above average compared to pre-corona times. Loneliness is a symptom of "hypercivilization”, according to the Zukunftsinstitut.',
                 source: "SPIEGEL",
                 link: "https://www.spiegel.de/panorama/corona-krise-16-prozent-der-deutschen-fuehlen-sich-einsam-a-c62d1653-4aa6-4e61-8ceb-527af77acdfe"
               }, {
-                text: "More and more people are living in single households. This is especially true for elderly people, who make up more than 50% of those. These are particularly in danger of loneliness.",
-                source: "SOURCE",
-                link: "LINK"
+                text: "More and more people are living in single households. Especially elderly people are particularly in danger of loneliness, with 34% of senior citizens living alone.",
+                source: "Statistisches Bundesamt",
+                link: "https://www.destatis.de/DE/Presse/Pressemitteilungen/Zahl-der-Woche/2018/PD18_49_p002.html"
               }, {
-                text: "Researchers found that participants who are online most frequently (50 or more visits/week) have three times the odds of perceived social isolation as those who went online less frequently.",
+                text: "Researchers found that survey participants who are online most frequently (50 or more visits/week) have three times the odds of perceived social isolation as those who went online less frequently.",
                 source: "Splendid Research",
                 link: "https://www.splendid-research.com/de/splendid-news/pressemitteilungen/item/studie-einsamkeit-deutschland-2018.html"
               }
@@ -757,16 +814,16 @@ new Vue({
           },
           {
             subtitle: 'Trend #1.3',
-            name: 'Increasing Mobility',
-            summary: 'In a globalized connected world global education and careers that are marked by "job-hopping" become more and more usual.',
-            detail: 'In addition, migration sped up in general due to the differences in wealth and interesting job markets like Europe, USA, Dubai that attract international talent. Additionally, it is easier to relocate more often as switching costs reduce with increased connectivity. This leads to families and close friends living ever further apart which leads to the need to find new ways to keep up close social bonds over such distances.',
+            name: 'A More Mobile World',
+            summary: 'In a highly connected world global education and careers characterized by "job-hopping" become more frequent.',
+            detail: 'Migration has sped up worldwide due to the differences in wealth and interesting job markets like Europe, USA, Dubai that attract international talent. Additionally, frequent relocation is becoming easier as moving costs reduce with increased connectivity. This leads to families and close friends living ever further apart resulting in the need to find new ways to keep up close social bonds over long distances.',
             image: './img/trend-mobility.jpg',
             id: 'trend-mobility',
             link: './theme-relationships.html#trend-mobility',
             category: ['short-term', 'micro', 'business', 'society'],
             signals: [
               {
-                text: "Younger generations change jobs more often. Gallup reports that in the millennial generation 21% say they've changed jobs within the past year, which is more than three times the number of non-millennials.",
+                text: "Younger generations change jobs more often. Gallup reports that in the millennial generation 21% say they have changed jobs within the past year, which is more than three times the number of non-millennials.",
                 source: "Gallup",
                 link: "https://www.gallup.com/workplace/231587/millennials-job-hopping-generation.aspx"
               }, {
@@ -774,30 +831,30 @@ new Vue({
                 source: "SWNS digital",
                 link: "https://www.swnsdigital.com/2019/12/modern-families-are-growing-further-apart-new-research-has-revealed/"
               }, {
-                text: "People are more likely to study and work abroad. The last years have seen an increase in student mobility, which lead to more workers mobility. ",
+                text: "People are more likely to study and work abroad. The last years have seen an increase in student mobility, which lead to more mobility of workers as well. ",
                 source: "IZA World of Labor",
                 link: "https://wol.iza.org/articles/university-study-abroad-and-graduates-employability/long"
               }
             ]
           },
         ],
-        introOpportunities: "[INTRO Opportunities]",
+        introOpportunities: "Finding new ways of getting close with family and friends from near and far.",
         opportunities: [
           {
             subtitle: 'Opportunity #1.1',
             name: 'Discover and Strengthen Your Local Community',
-            summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours or people living in the same house. In times of social distancing, however, this could prove crucially important to team up for grocery shoppings, share necessary items, or to have one person in the same house that you are still allowed to meet, even in complete lockdown. In "normal" times, knowing people in their local communities would help to feel at home in a new city more quickly and to prevent loneliness in cities.',
-            valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new friend circles of friends of friends that live close together that could support one another mentally as well as in everyday needs. By connecting them to people that are close to their social network, you increase the chance that they trust one another more quickly and that lasting and strong social bonds form.',
-            solutionsketch: "Build an app/website that builds a person's social network from his existing social media contacts and asks for a person's current location (and/or location he/she will move to). Ask the person how close people should live that we then give “friend” suggestions for. Thereby we create a person’s personal circle of friends in the local area (/multiple areas) that he can reach out to via the platform. In an advanced mode, the platform could even facilitate organizing accumulated shopping trips and exchanges/borrowings of everyday goods (e.g. kitchen machines or car).",
+            summary: 'Most people living in cities have friends in all parts of the city, but are rarely friends with their neighbours. In times of social distancing, however, it could become crucial to team up for grocery shopping, sharing necessary items, or for having one close contact person, even in complete lockdown. In "normal" times, knowing people in local communities helps to feel at home in a new city more quickly and to prevents loneliness in cities.',
+            valueproposition: 'With a platform that connects people to new people that are close to their social network, we could enable the formation of new circles of friends that live close together and could support each other mentally as well as with everyday needs. By connecting people that are close to their existing social network, we increase the chance that trust is built quickly and lasting social bonds form.',
+            solutionsketch: "An app/website can be built that creates a person's extended social network from existing social media contacts and asks for a person's current location (and/or location he/she will move to). The app/website ask the person how close people should live and then offers matching friend suggestions. Thereby, we create a personal circle of friends in the local area that he/she can reach out to via the platform. An advanced version of the platform could even facilitate accumulated shopping trips and exchanges/borrowings of everyday items (e.g. kitchen machines or cars).",
             image: './img/opportunity-local-community.jpg',
             id: 'opportunity-local-community',
             link: './theme-relationships.html#opportunity-local-community',
           }, {
             subtitle: 'Opportunity #1.2',
             name: 'Inclusive Events That Connect All Your Loved Ones',
-            summary: 'Especially in these days we see that it is more difficult for risk-groups to join big festivities like birthdays, weddings and other festivities. This phenomena will probably extend far into the future since people in the risk-group will stay alert for a really long time (if not for ever). Trends that encourage this phenomena are the ageing of the population and a larger spatial dispersion of families. Both trends increase the trend that it is more difficult for grandparents and great-grandparents to join parties. This means that they cannot join in important social rites that make society tick.',
-            valueproposition: 'We offer a solution that makes it easier for people to join parties out of the comfort of their home. They do not need to undertake streaneous and costly travel which could be risky in terms of health but stay at home and still join their loved ones wherever they are. The set-up is easy and does not need to be permanent but can be used solely for events.',
-            solutionsketch: "The solution that we offer is a lot like current video-conferencing tools, but is distinguished in two important ways from the existing video-conferencing software: Firstly it is very easy to access even for people that do not know much about technology and secondly the second party will have an easier time interacting and transporting the event where they are (e.g. no need to carry your phone in front of you to show where you are). This is ensured through a camera system that follows the action in real time and that invites for interaction.",
+            summary: 'Especially in these days, we see that it is more difficult for risk-groups to join big events like birthdays, weddings and other festivities. This phenomenon will likely extend far into the future since people in risk-groups will need to stay alert for a long time (if not forever). Trends that encourage this phenomenon are the aging of the population and a larger spatial dispersion of families. Both tendencies support the trend that it is more difficult for risk-groups to join family parties. This means that they are excluded from important social activities that make society tick.',
+            valueproposition: 'We offer a solution that makes it easier for people to join parties out of the comfort of their home. They do not need to undertake strenuous and costly travel which could be risky in terms of health but stay at home and still join their loved ones wherever they are. The set-up is easy and does not need to be permanent but can be used solely for events.',
+            solutionsketch: "The solution that we offer is similar to current video-conferencing tools, but distinguishable in two important ways: Firstly it is very easy to access even for people that do not know much about technology and secondly the party will have an easier time interacting and transporting the event where they are (e.g. no need to carry your phone in front of you to show where you are). This is ensured through a camera system that follows the action in real-time and that invites for interaction.",
             image: './img/opportunity-inclusive-events.jpg',
             id: 'opportunity-inclusive-events',
             link: './theme-relationships.html#opportunity-inclusive-events',
