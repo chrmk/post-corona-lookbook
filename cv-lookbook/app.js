@@ -698,9 +698,9 @@ Vue.component('cv-tiles', {
   methods: {
     getSizeClass: function (isSmall) {
       if(isSmall) {
-        return "col-md-12 col-md-offset-0"
+        return "col-sm-12 col-md-offset-0"
       } else {
-        return "col-md-12"
+        return "col-sm-12"
       }
     }
   },
@@ -713,7 +713,7 @@ Vue.component('cv-tiles', {
           <div class="liquid-blog-posts">
             <div class="liquid-blog-grid row">
 
-              <div v-for="t in tiles" class="lqd-column col-md-4">
+              <div v-for="t in tiles" class="lqd-column col-sm-4">
                 <article class="liquid-lp">
                   <figure class="liquid-lp-media rounded">
                     <a :href=t.link data-localscroll="true">
