@@ -8,6 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="theme-color" content="#3ed2a7">
 
+	<meta name="google-site-verification" content="Idrq9_Kkt_sX3yYST_WiuGC1Lp-E9ijuDna187RanoM" />
+	<meta name="google-site-verification" content="SFJ1mRQn1falktOY4NN37uYV5ETk1C_Kb2wL0kVYpgE" />
+
 	<link rel="shortcut icon" href="./favicon.png" />
 
 	<title>Social Bonding Post-Corona | CDTM CenterVenture 2020</title>
@@ -23,7 +26,7 @@
 	<!-- Head Libs -->
 	<script async src="assets/vendors/modernizr.min.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 
 	<style>
 		#primary-nav li {
@@ -49,11 +52,11 @@
 
 			<cv-theme-header v-bind:theme="themes[2]"></cv-theme-header>
 
-			<section class="vc_row pt-20 pb-20 section-colored">
+			<section class="vc_row pt-40 pb-20 section-colored">
 				<div class="container">
 
 					<cv-headline subtitle="The Trend Perspective" v-bind:title="themes[2].introTrends"></cv-headline>
-					<cv-tiles v-bind:t="themes[2].trends" isSmall></cv-tiles>
+					<!-- <cv-tiles v-bind:tiles="themes[2].trends" isSmall></cv-tiles> -->
 
 				</div><!-- /.container -->
 			</section><!-- /.vc_row -->
@@ -61,20 +64,6 @@
 			<cv-trend-details v-bind:t="themes[2].trends[0]"></cv-trend-details>
 			<cv-trend-details v-bind:t="themes[2].trends[1]"></cv-trend-details>
 			<cv-trend-details v-bind:t="themes[2].trends[2]"></cv-trend-details>
-
-
-			<section class="vc_row pt-20 pb-20 section-colored">
-				<div class="container">
-
-					<cv-headline subtitle="The Opportunity Perspective" v-bind:title="themes[2].introOpportunities"></cv-headline>
-					<cv-tiles v-bind:t="themes[2].opportunities" isSmall></cv-tiles>
-
-				</div><!-- /.container -->
-			</section><!-- /.vc_row -->
-
-			<cv-opportunity-details v-bind:o="themes[2].opportunities[0]"></cv-opportunity-details>
-			<cv-opportunity-details v-bind:o="themes[2].opportunities[1]"></cv-opportunity-details>
-			<cv-opportunity-details v-bind:o="themes[2].opportunities[2]"></cv-opportunity-details>
 
 		</main><!-- /#content.content -->
 
@@ -88,6 +77,16 @@
 
 	<!-- Vue.js custom files -->
 	<script src="app.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12983139-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-12983139-1');
+	</script>
 
 </body>
 
