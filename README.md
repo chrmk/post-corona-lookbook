@@ -1,4 +1,4 @@
-# CDTM Center Venture 2020:<br>Innovation Lookbook on Social Bonding in a Post-Corona World
+# CDTM Center Venture 2020:<br>Lookbook on Social Bonding in a Post-Corona World
 
 > „Prolonged or intermittent social distancing may be necessary into 2022“,  
 says the Harvard School of Public Health.  
